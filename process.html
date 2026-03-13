@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process — Zachary Eldred</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader__logo">
+      <svg class="loader__svg" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="5" y="48" class="loader__letter loader__letter--z" font-family="'Playfair Display', serif" font-size="52" fill="#f0f0f0">Z</text>
+        <text x="55" y="48" class="loader__letter loader__letter--e" font-family="'Playfair Display', serif" font-size="52" fill="#f0f0f0">E</text>
+        <line class="loader__line" x1="10" y1="56" x2="110" y2="56" stroke="#555" stroke-width="0.5"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" id="pageTransition"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Film Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo magnetic" data-strength="0.3">ZE</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html" class="magnetic" data-strength="0.4">About</a></li>
+      <li><a href="gallery.html" class="magnetic" data-strength="0.4">Portfolio</a></li>
+      <li><a href="process.html" class="active magnetic" data-strength="0.4">Process</a></li>
+      <li><a href="contact.html" class="magnetic" data-strength="0.4">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="process-hero">
+    <h1>The Process</h1>
+    <p>Every frame starts with the right tool. Scroll to explore what's inside.</p>
+  </section>
+
+  <!-- Exploded Camera Section -->
+  <section class="exploded-section" id="explodedSection">
+    <div class="exploded-sticky">
+
+      <!-- Scroll progress -->
+      <div class="scroll-progress" id="scrollProgress">
+        <div class="scroll-progress__track">
+          <div class="scroll-progress__fill" id="progressFill"></div>
+        </div>
+        <span class="scroll-progress__label">Scroll</span>
+      </div>
+
+      <!-- Camera scene -->
+      <div class="camera-scene" id="cameraScene">
+        <!-- Connector lines SVG -->
+        <svg class="connector-lines" id="connectorLines" viewBox="0 0 520 520">
+          <line id="line-lens" x1="260" y1="260" x2="260" y2="50"/>
+          <line id="line-evf" x1="260" y1="140" x2="400" y2="40"/>
+          <line id="line-sensor" x1="260" y1="260" x2="100" y2="400"/>
+          <line id="line-grip" x1="105" y1="260" x2="30" y2="400"/>
+          <line id="line-screen" x1="260" y1="340" x2="420" y2="440"/>
+          <line id="line-dial" x1="305" y1="140" x2="430" y2="100"/>
+          <line id="line-mount" x1="260" y1="260" x2="100" y2="200"/>
+          <line id="line-card" x1="360" y1="260" x2="460" y2="260"/>
+          <line id="line-battery" x1="260" y1="380" x2="260" y2="480"/>
+        </svg>
+
+        <!-- LENS -->
+        <div class="camera-part part-lens" data-name="FE 24-70mm f/2.8 GM" data-spec="G Master Series" data-desc="Zachary's go-to workhorse. Razor-sharp across the entire zoom range with beautiful bokeh wide open at f/2.8. Perfect for everything from portraits to action sports.">
+          <svg viewBox="0 0 140 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lensGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#3a3a3a"/>
+                <stop offset="50%" stop-color="#2a2a2a"/>
+                <stop offset="100%" stop-color="#1e1e1e"/>
+              </linearGradient>
+              <radialGradient id="glassGrad" cx="50%" cy="45%">
+                <stop offset="0%" stop-color="#4a5568" stop-opacity=".6"/>
+                <stop offset="60%" stop-color="#2d3748" stop-opacity=".8"/>
+                <stop offset="100%" stop-color="#1a202c"/>
+              </radialGradient>
+            </defs>
+            <rect x="15" y="20" width="110" height="150" rx="8" fill="url(#lensGrad)" stroke="#444" stroke-width=".5"/>
+            <g opacity=".3">
+              <line x1="20" y1="55" x2="120" y2="55" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="58" x2="120" y2="58" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="61" x2="120" y2="61" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="64" x2="120" y2="64" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="67" x2="120" y2="67" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="100" x2="120" y2="100" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="103" x2="120" y2="103" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="106" x2="120" y2="106" stroke="#555" stroke-width=".3"/>
+              <line x1="20" y1="109" x2="120" y2="109" stroke="#555" stroke-width=".3"/>
+            </g>
+            <ellipse cx="70" cy="30" rx="42" ry="12" fill="url(#glassGrad)" stroke="#555" stroke-width=".5"/>
+            <ellipse cx="62" cy="27" rx="15" ry="5" fill="rgba(255,255,255,.06)"/>
+            <text x="70" y="88" text-anchor="middle" font-size="5" fill="#555" font-family="Inter, sans-serif" letter-spacing="1.5">24-70mm</text>
+            <circle cx="25" cy="140" r="3" fill="#cc6633" opacity=".8"/>
+            <text x="33" y="142" font-size="4.5" fill="#888" font-family="Inter, sans-serif">GM</text>
+          </svg>
+        </div>
+
+        <!-- CAMERA BODY -->
+        <div class="camera-part part-body" data-name="Sony α7R III Body" data-spec="ILCE-7RM3 · 657g" data-desc="Magnesium alloy chassis with weather sealing throughout. Compact full-frame design that can handle any shooting condition from desert sun to mountain snow.">
+          <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2a2a2a"/>
+                <stop offset="100%" stop-color="#1a1a1a"/>
+              </linearGradient>
+            </defs>
+            <rect x="5" y="15" width="230" height="140" rx="6" fill="url(#bodyGrad)" stroke="#3a3a3a" stroke-width=".8"/>
+            <rect x="5" y="15" width="230" height="25" rx="6" fill="#252525" stroke="#3a3a3a" stroke-width=".5"/>
+            <text x="120" y="32" text-anchor="middle" font-size="8" fill="#666" font-family="Inter, sans-serif" letter-spacing="3" font-weight="600">SONY</text>
+            <text x="180" y="32" font-size="5.5" fill="#555" font-family="Inter, sans-serif" letter-spacing="1">α7R III</text>
+            <circle cx="85" cy="95" r="38" fill="none" stroke="#3a3a3a" stroke-width="1"/>
+            <circle cx="85" cy="95" r="32" fill="#161616" stroke="#333" stroke-width=".5"/>
+            <circle cx="85" cy="60" r="2" fill="#444"/>
+            <circle cx="118" cy="85" r="2" fill="#444"/>
+            <circle cx="85" cy="130" r="2" fill="#444"/>
+            <rect x="5" y="40" width="30" height="100" rx="4" fill="#222" stroke="#333" stroke-width=".5"/>
+            <g opacity=".2">
+              <line x1="10" y1="50" x2="30" y2="50" stroke="#555" stroke-width=".3"/>
+              <line x1="10" y1="53" x2="30" y2="53" stroke="#555" stroke-width=".3"/>
+              <line x1="10" y1="56" x2="30" y2="56" stroke="#555" stroke-width=".3"/>
+              <line x1="10" y1="59" x2="30" y2="59" stroke="#555" stroke-width=".3"/>
+              <line x1="10" y1="62" x2="30" y2="62" stroke="#555" stroke-width=".3"/>
+              <line x1="10" y1="65" x2="30" y2="65" stroke="#555" stroke-width=".3"/>
+              <line x1="10" y1="68" x2="30" y2="68" stroke="#555" stroke-width=".3"/>
+              <line x1="10" y1="71" x2="30" y2="71" stroke="#555" stroke-width=".3"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- EVF / Viewfinder -->
+        <div class="camera-part part-evf" data-name="Electronic Viewfinder" data-spec="3.69M dots · OLED" data-desc="Quad-VGA OLED Tru-Finder with 0.78x magnification. What Zachary sees in real-time — accurate color and exposure preview before the shutter fires.">
+          <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="5" width="70" height="50" rx="4" fill="#222" stroke="#3a3a3a" stroke-width=".8"/>
+            <rect x="20" y="12" width="40" height="20" rx="3" fill="#1a1a1a" stroke="#444" stroke-width=".5"/>
+            <rect x="15" y="35" width="50" height="15" rx="6" fill="#2a2a2a" stroke="#3a3a3a" stroke-width=".5"/>
+            <circle cx="68" cy="30" r="4" fill="none" stroke="#444" stroke-width=".5"/>
+            <line x1="68" y1="27" x2="68" y2="33" stroke="#555" stroke-width=".4"/>
+          </svg>
+        </div>
+
+        <!-- LCD Screen -->
+        <div class="camera-part part-screen" data-name="3.0&quot; Tilting LCD" data-spec="1.44M dots · Touch-enabled" data-desc="Tilting touchscreen for live view composition and menu navigation. Locks flat against the body for protection, tilts up 107° and down 41° for creative angles.">
+          <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="2" width="140" height="8" rx="2" fill="#252525" stroke="#333" stroke-width=".5"/>
+            <rect x="5" y="10" width="150" height="95" rx="3" fill="#1a1a1a" stroke="#333" stroke-width=".8"/>
+            <rect x="12" y="16" width="136" height="82" rx="1" fill="#111" stroke="#2a2a2a" stroke-width=".3"/>
+            <rect x="12" y="16" width="136" height="30" rx="1" fill="rgba(255,255,255,.02)"/>
+            <line x1="80" y1="40" x2="80" y2="75" stroke="#333" stroke-width=".3"/>
+            <line x1="45" y1="57" x2="115" y2="57" stroke="#333" stroke-width=".3"/>
+            <rect x="73" y="50" width="14" height="14" rx="1" fill="none" stroke="#555" stroke-width=".3"/>
+          </svg>
+        </div>
+
+        <!-- Image Sensor -->
+        <div class="camera-part part-sensor" data-name="42.4MP BSI CMOS Sensor" data-spec="Full Frame · 35.9 × 24mm" data-desc="Back-illuminated Exmor R sensor — the heart of the camera. 42.4 megapixels with no anti-aliasing filter for maximum detail. ISO range of 100–32,000 expandable to 102,400.">
+          <svg viewBox="0 0 70 52" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sensorGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2d4a3a"/>
+                <stop offset="50%" stop-color="#1a3a2a"/>
+                <stop offset="100%" stop-color="#152e22"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="66" height="48" rx="2" fill="#1a2a1e" stroke="#2a4a35" stroke-width=".5"/>
+            <rect x="11" y="8" width="48" height="36" rx="1" fill="url(#sensorGrad)" stroke="#3a5a45" stroke-width=".5"/>
+            <g opacity=".15">
+              <line x1="20" y1="8" x2="20" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
+              <line x1="30" y1="8" x2="30" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
+              <line x1="40" y1="8" x2="40" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
+              <line x1="50" y1="8" x2="50" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
+              <line x1="11" y1="18" x2="59" y2="18" stroke="#5a8a6a" stroke-width=".2"/>
+              <line x1="11" y1="28" x2="59" y2="28" stroke="#5a8a6a" stroke-width=".2"/>
+              <line x1="11" y1="38" x2="59" y2="38" stroke="#5a8a6a" stroke-width=".2"/>
+            </g>
+            <g opacity=".3">
+              <line x1="5" y1="15" x2="11" y2="15" stroke="#aaa" stroke-width=".2"/>
+              <line x1="5" y1="25" x2="11" y2="25" stroke="#aaa" stroke-width=".2"/>
+              <line x1="5" y1="35" x2="11" y2="35" stroke="#aaa" stroke-width=".2"/>
+              <line x1="59" y1="15" x2="65" y2="15" stroke="#aaa" stroke-width=".2"/>
+              <line x1="59" y1="25" x2="65" y2="25" stroke="#aaa" stroke-width=".2"/>
+              <line x1="59" y1="35" x2="65" y2="35" stroke="#aaa" stroke-width=".2"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Grip -->
+        <div class="camera-part part-grip" data-name="Ergonomic Grip" data-spec="Textured rubber · Deep contour" data-desc="Redesigned deep grip for all-day shooting comfort. Critical when Zachary is on a 6-hour sports shoot or hauling gear through rough terrain.">
+          <svg viewBox="0 0 65 150" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10,8 Q5,8 5,15 L5,130 Q5,142 15,142 L45,142 Q55,142 58,130 L60,20 Q60,8 50,8 Z" fill="#222" stroke="#3a3a3a" stroke-width=".8"/>
+            <g opacity=".25">
+              <line x1="12" y1="25" x2="50" y2="25" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="30" x2="50" y2="30" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="35" x2="50" y2="35" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="40" x2="50" y2="40" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="45" x2="50" y2="45" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="50" x2="50" y2="50" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="55" x2="50" y2="55" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="60" x2="50" y2="60" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="65" x2="50" y2="65" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="70" x2="50" y2="70" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="75" x2="50" y2="75" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="80" x2="50" y2="80" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="85" x2="50" y2="85" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="90" x2="50" y2="90" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="95" x2="50" y2="95" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="100" x2="50" y2="100" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="105" x2="50" y2="105" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="110" x2="50" y2="110" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="115" x2="50" y2="115" stroke="#555" stroke-width=".4"/>
+              <line x1="12" y1="120" x2="50" y2="120" stroke="#555" stroke-width=".4"/>
+            </g>
+            <ellipse cx="40" cy="12" rx="8" ry="4" fill="#333" stroke="#444" stroke-width=".5"/>
+          </svg>
+        </div>
+
+        <!-- Top Dials -->
+        <div class="camera-part part-dial-top" data-name="Control Dials" data-spec="Mode · Exposure Comp · Custom" data-desc="Dual control dials plus dedicated exposure compensation dial. Quick access to shooting mode, drive mode, and custom settings without diving into menus.">
+          <svg viewBox="0 0 90 35" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="17" r="14" fill="#252525" stroke="#444" stroke-width=".6"/>
+            <circle cx="22" cy="17" r="10" fill="#222" stroke="#3a3a3a" stroke-width=".3"/>
+            <text x="22" y="15" text-anchor="middle" font-size="3.5" fill="#777" font-family="Inter, sans-serif">M</text>
+            <text x="22" y="21" text-anchor="middle" font-size="2.5" fill="#555" font-family="Inter, sans-serif">MODE</text>
+            <circle cx="55" cy="17" r="12" fill="#2a2a2a" stroke="#444" stroke-width=".6"/>
+            <g opacity=".4">
+              <line x1="55" y1="7" x2="55" y2="10" stroke="#888" stroke-width=".3"/>
+              <line x1="63" y1="10" x2="61" y2="12" stroke="#888" stroke-width=".3"/>
+              <line x1="65" y1="17" x2="62" y2="17" stroke="#888" stroke-width=".3"/>
+              <line x1="63" y1="24" x2="61" y2="22" stroke="#888" stroke-width=".3"/>
+              <line x1="55" y1="27" x2="55" y2="24" stroke="#888" stroke-width=".3"/>
+              <line x1="47" y1="24" x2="49" y2="22" stroke="#888" stroke-width=".3"/>
+              <line x1="45" y1="17" x2="48" y2="17" stroke="#888" stroke-width=".3"/>
+              <line x1="47" y1="10" x2="49" y2="12" stroke="#888" stroke-width=".3"/>
+            </g>
+            <rect x="73" y="10" width="14" height="14" rx="3" fill="#252525" stroke="#444" stroke-width=".4"/>
+            <text x="80" y="19" text-anchor="middle" font-size="3.5" fill="#666" font-family="Inter, sans-serif">C1</text>
+          </svg>
+        </div>
+
+        <!-- Lens Mount -->
+        <div class="camera-part part-mount" data-name="Sony E-Mount" data-spec="18mm flange distance" data-desc="Sony's full-frame E-mount system. Short flange distance means compatibility with a massive ecosystem of native lenses plus nearly any adapted glass from Canon, Nikon, Leica, and more.">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#3a3a3a" stroke-width="1"/>
+            <circle cx="50" cy="50" r="40" fill="#161616" stroke="#333" stroke-width=".5"/>
+            <circle cx="50" cy="50" r="30" fill="#111" stroke="#2a2a2a" stroke-width=".3"/>
+            <g opacity=".5">
+              <circle cx="30" cy="25" r="1.5" fill="#886622"/>
+              <circle cx="20" cy="40" r="1.5" fill="#886622"/>
+              <circle cx="20" cy="60" r="1.5" fill="#886622"/>
+              <circle cx="30" cy="75" r="1.5" fill="#886622"/>
+              <circle cx="50" cy="83" r="1.5" fill="#886622"/>
+              <circle cx="70" cy="75" r="1.5" fill="#886622"/>
+              <circle cx="80" cy="60" r="1.5" fill="#886622"/>
+              <circle cx="80" cy="40" r="1.5" fill="#886622"/>
+              <circle cx="70" cy="25" r="1.5" fill="#886622"/>
+            </g>
+            <rect x="88" y="45" width="8" height="10" rx="1" fill="#2a2a2a" stroke="#333" stroke-width=".3"/>
+          </svg>
+        </div>
+
+        <!-- Dual Card Slots -->
+        <div class="camera-part part-card-slot" data-name="Dual SD Card Slots" data-spec="UHS-I / UHS-II" data-desc="Two card slots for backup redundancy or overflow. Slot 1 is UHS-II for fast burst writing, Slot 2 handles UHS-I. Zachary shoots backup to both — never risk losing the shot.">
+          <svg viewBox="0 0 50 70" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="44" height="64" rx="3" fill="#1e1e1e" stroke="#3a3a3a" stroke-width=".6"/>
+            <rect x="8" y="8" width="34" height="24" rx="2" fill="#2a2a2a" stroke="#444" stroke-width=".4"/>
+            <text x="25" y="22" text-anchor="middle" font-size="3.5" fill="#666" font-family="Inter, sans-serif" letter-spacing=".5">SD 1</text>
+            <text x="25" y="28" text-anchor="middle" font-size="2.5" fill="#555" font-family="Inter, sans-serif">UHS-II</text>
+            <rect x="8" y="38" width="34" height="24" rx="2" fill="#2a2a2a" stroke="#444" stroke-width=".4"/>
+            <text x="25" y="52" text-anchor="middle" font-size="3.5" fill="#666" font-family="Inter, sans-serif" letter-spacing=".5">SD 2</text>
+            <text x="25" y="58" text-anchor="middle" font-size="2.5" fill="#555" font-family="Inter, sans-serif">UHS-I</text>
+          </svg>
+        </div>
+
+        <!-- Battery -->
+        <div class="camera-part part-battery" data-name="NP-FZ100 Battery" data-spec="2280mAh · 530 shots rated" data-desc="High-capacity Z-series battery — a huge upgrade over the A7R II. Gets Zachary through full-day shoots without swapping. USB charging means topping off anywhere between sets.">
+          <svg viewBox="0 0 60 45" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="8" width="54" height="34" rx="3" fill="#252525" stroke="#3a3a3a" stroke-width=".6"/>
+            <rect x="15" y="4" width="30" height="6" rx="1" fill="#333" stroke="#444" stroke-width=".3"/>
+            <text x="30" y="25" text-anchor="middle" font-size="4" fill="#666" font-family="Inter, sans-serif" letter-spacing=".8">NP-FZ100</text>
+            <text x="30" y="33" text-anchor="middle" font-size="3" fill="#555" font-family="Inter, sans-serif">2280mAh</text>
+            <rect x="8" y="36" width="20" height="2" rx="1" fill="#3a6a3a" opacity=".6"/>
+          </svg>
+        </div>
+
+      </div><!-- /.camera-scene -->
+
+      <!-- Stage label -->
+      <div class="stage-label" id="stageLabel">
+        <div class="stage-label__title" id="stageLabelTitle">Sony α7R III</div>
+        <div class="stage-label__sub" id="stageLabelSub">Scroll to explore</div>
+      </div>
+
+    </div><!-- /.exploded-sticky -->
+  </section>
+
+  <!-- Process Steps (below the camera) -->
+  <section class="process-steps">
+    <h2 class="process-steps__title">How Zachary Works</h2>
+
+    <div class="step" data-step>
+      <div class="step__number">01</div>
+      <div>
+        <h3 class="step__title">Discovery &amp; Concept</h3>
+        <p class="step__desc">We talk through your vision, mood, and goals. I study references, scout locations, and map out a shot list that tells your story.</p>
+      </div>
+    </div>
+    <div class="step" data-step>
+      <div class="step__number">02</div>
+      <div>
+        <h3 class="step__title">The Shoot</h3>
+        <p class="step__desc">On-location or in-studio — I work fast, direct with intention, and stay loose enough to capture the unexpected. Natural light when possible, shaped light when needed.</p>
+      </div>
+    </div>
+    <div class="step" data-step>
+      <div class="step__number">03</div>
+      <div>
+        <h3 class="step__title">Cull &amp; Select</h3>
+        <p class="step__desc">I review every frame, narrowing down to the strongest selects. Quality over quantity — only the images that hit land in the final set.</p>
+      </div>
+    </div>
+    <div class="step" data-step>
+      <div class="step__number">04</div>
+      <div>
+        <h3 class="step__title">Edit &amp; Refine</h3>
+        <p class="step__desc">Each image goes through color grading, tonal adjustments, and retouching in Lightroom and Photoshop. I develop a consistent look that's true to the moment.</p>
+      </div>
+    </div>
+    <div class="step" data-step>
+      <div class="step__number">05</div>
+      <div>
+        <h3 class="step__title">Delivery</h3>
+        <p class="step__desc">High-res files delivered via private online gallery. Print-ready, social-optimized, and backed up. Your images, finished and forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">Zachary Eldred</span>
+        <p class="footer__copy">&copy; 2026 All rights reserved.</p>
+      </div>
+      <div class="footer__social">
+        <a href="#" class="magnetic" data-strength="0.3">Instagram</a>
+        <a href="#" class="magnetic" data-strength="0.3">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tooltip Element -->
+  <div class="tooltip" id="tooltip">
+    <div class="tooltip__inner">
+      <div class="tooltip__name" id="tooltipName"></div>
+      <div class="tooltip__spec" id="tooltipSpec"></div>
+      <div class="tooltip__desc" id="tooltipDesc"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    /* ========================================
+       Exploded Camera — Scroll Controller
+       ======================================== */
+
+    const section     = document.getElementById('explodedSection');
+    const progressBar = document.getElementById('progressFill');
+    const progressEl  = document.getElementById('scrollProgress');
+    const connectors  = document.getElementById('connectorLines');
+    const stageLabel  = document.getElementById('stageLabel');
+    const stageTitleEl = document.getElementById('stageLabelTitle');
+    const stageSubEl   = document.getElementById('stageLabelSub');
+    const tooltip     = document.getElementById('tooltip');
+    const tooltipName = document.getElementById('tooltipName');
+    const tooltipSpec = document.getElementById('tooltipSpec');
+    const tooltipDesc = document.getElementById('tooltipDesc');
+
+    // Part explosion offsets (at full explosion, scroll progress = 1)
+    const explosionMap = {
+      'part-lens':      { x: 0,    y: -180, rotate: -3  },
+      'part-evf':       { x: 100,  y: -160, rotate: 5   },
+      'part-screen':    { x: 110,  y: 150,  rotate: -4  },
+      'part-sensor':    { x: -140, y: 130,  rotate: 8   },
+      'part-grip':      { x: -130, y: 110,  rotate: -6  },
+      'part-dial-top':  { x: 120,  y: -130, rotate: 3   },
+      'part-mount':     { x: -120, y: -50,  rotate: -10 },
+      'part-card-slot': { x: 150,  y: 0,    rotate: 5   },
+      'part-battery':   { x: 0,    y: 190,  rotate: -5  },
+      'part-body':      { x: 0,    y: 0,    rotate: 0   },
+    };
+
+    const stageLabels = [
+      { at: 0.0, title: 'Sony α7R III', sub: 'Scroll to explore' },
+      { at: 0.15, title: 'Disassembly', sub: 'Every piece serves a purpose' },
+      { at: 0.5,  title: 'Fully Exploded', sub: 'Hover any part to learn more' },
+      { at: 0.85, title: '42.4 Megapixels of Intent', sub: 'The tool behind the vision' },
+    ];
+
+    function getScrollProgress() {
+      const rect = section.getBoundingClientRect();
+      const sectionHeight = section.offsetHeight - window.innerHeight;
+      const scrolled = -rect.top;
+      return Math.max(0, Math.min(1, scrolled / sectionHeight));
+    }
+
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function updateCamera() {
+      const raw = getScrollProgress();
+      const t = easeOutCubic(raw);
+
+      // Progress bar
+      progressBar.style.height = (raw * 100) + '%';
+
+      // Show/hide progress indicator
+      if (raw > 0.01 && raw < 0.99) {
+        progressEl.classList.add('visible');
+      } else {
+        progressEl.classList.remove('visible');
+      }
+
+      // Show connectors when exploded
+      if (t > 0.3) {
+        connectors.classList.add('visible');
+      } else {
+        connectors.classList.remove('visible');
+      }
+
+      // Update stage labels
+      let currentStage = stageLabels[0];
+      for (const stage of stageLabels) {
+        if (raw >= stage.at) currentStage = stage;
+      }
+      stageTitleEl.textContent = currentStage.title;
+      stageSubEl.textContent = currentStage.sub;
+      if (raw > 0.02) {
+        stageLabel.classList.add('active');
+      } else {
+        stageLabel.classList.remove('active');
+      }
+
+      // Move each part
+      document.querySelectorAll('.camera-part').forEach(part => {
+        const classes = part.className.split(' ');
+        let key = null;
+        for (const cls of classes) {
+          if (explosionMap[cls]) { key = cls; break; }
+        }
+        if (!key) return;
+        const off = explosionMap[key];
+        const x = off.x * t;
+        const y = off.y * t;
+        const r = off.rotate * t;
+        part.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+      });
+    }
+
+    // Tooltip handling
+    document.querySelectorAll('.camera-part').forEach(part => {
+      part.addEventListener('mouseenter', (e) => {
+        tooltipName.textContent = part.dataset.name || '';
+        tooltipSpec.textContent = part.dataset.spec || '';
+        tooltipDesc.textContent = part.dataset.desc || '';
+        tooltip.classList.add('visible');
+      });
+
+      part.addEventListener('mousemove', (e) => {
+        const pad = 16;
+        let x = e.clientX + pad;
+        let y = e.clientY + pad;
+        const tw = 280;
+        if (x + tw > window.innerWidth) x = e.clientX - tw - pad;
+        if (y + 200 > window.innerHeight) y = e.clientY - 200;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+      });
+
+      part.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+      });
+    });
+
+    // Scroll listener
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateCamera();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Process steps reveal
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.step').forEach(step => {
+      stepObserver.observe(step);
+    });
+
+    // Initial state
+    updateCamera();
+  </script>
+</body>
+</html>
