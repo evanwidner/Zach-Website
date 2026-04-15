@@ -14,10 +14,29 @@
   <!-- Loading Screen -->
   <div class="loader" id="loader">
     <div class="loader__logo">
-      <svg class="loader__svg" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="5" y="48" class="loader__letter loader__letter--z" font-family="'Playfair Display', serif" font-size="52" fill="#f0f0f0">Z</text>
-        <text x="55" y="48" class="loader__letter loader__letter--e" font-family="'Playfair Display', serif" font-size="52" fill="#f0f0f0">E</text>
-        <line class="loader__line" x1="10" y1="56" x2="110" y2="56" stroke="#555" stroke-width="0.5"/>
+      <svg class="loader__svg" viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="apGL" cx="35%" cy="28%" r="72%">
+            <stop offset="0%" stop-color="#f4df88"/>
+            <stop offset="55%" stop-color="#c8a45a"/>
+            <stop offset="100%" stop-color="#7a5018"/>
+          </radialGradient>
+        </defs>
+        <g transform="translate(40,40)">
+          <circle r="30" fill="#0d0d0d"/>
+          <circle r="30" fill="none" stroke="rgba(200,164,90,0.25)" stroke-width="1.2"/>
+          <g class="loader-aperture-blades">
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(0)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(60)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(120)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(180)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(240)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(300)"/>
+          </g>
+          <circle r="8" fill="#0a0a0a"/>
+        </g>
+        <text x="210" y="29" text-anchor="middle" font-family="'Playfair Display', serif" font-size="18" fill="#f0f0f0" font-weight="600" letter-spacing="4.5">ZACHARY ELDRED</text>
+        <text x="210" y="51" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.5" fill="#c8a45a" letter-spacing="3.5">— PHOTOGRAPHY —</text>
       </svg>
     </div>
   </div>
@@ -36,7 +55,32 @@
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo magnetic" data-strength="0.3">ZE</a>
+    <a href="index.html" class="nav__logo magnetic" data-strength="0.3">
+      <svg class="nav-logo-svg" viewBox="0 0 175 32" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="apGN" cx="35%" cy="28%" r="72%">
+            <stop offset="0%" stop-color="#f4df88"/>
+            <stop offset="55%" stop-color="#c8a45a"/>
+            <stop offset="100%" stop-color="#7a5018"/>
+          </radialGradient>
+        </defs>
+        <g transform="translate(16,16)">
+          <circle r="14.5" fill="#0d0d0d"/>
+          <circle r="14.5" fill="none" stroke="rgba(200,164,90,0.3)" stroke-width="0.7"/>
+          <g class="nav-aperture-blades">
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(0)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(60)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(120)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(180)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(240)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(300)"/>
+          </g>
+          <circle r="3.5" fill="#0a0a0a"/>
+        </g>
+        <text x="106" y="13" text-anchor="middle" font-family="'Playfair Display', serif" font-size="9.5" fill="#f0f0f0" font-weight="600" letter-spacing="2.5">ZACHARY ELDRED</text>
+        <text x="106" y="24.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="5.5" fill="#c8a45a" letter-spacing="2">— PHOTOGRAPHY —</text>
+      </svg>
+    </a>
     <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -69,236 +113,593 @@
       <!-- Camera scene -->
       <div class="camera-scene" id="cameraScene">
         <!-- Connector lines SVG -->
-        <svg class="connector-lines" id="connectorLines" viewBox="0 0 520 520">
-          <line id="line-lens" x1="260" y1="260" x2="260" y2="50"/>
-          <line id="line-evf" x1="260" y1="140" x2="400" y2="40"/>
-          <line id="line-sensor" x1="260" y1="260" x2="100" y2="400"/>
-          <line id="line-grip" x1="105" y1="260" x2="30" y2="400"/>
-          <line id="line-screen" x1="260" y1="340" x2="420" y2="440"/>
-          <line id="line-dial" x1="305" y1="140" x2="430" y2="100"/>
-          <line id="line-mount" x1="260" y1="260" x2="100" y2="200"/>
-          <line id="line-card" x1="360" y1="260" x2="460" y2="260"/>
-          <line id="line-battery" x1="260" y1="380" x2="260" y2="480"/>
+        <svg class="connector-lines" id="connectorLines" viewBox="0 0 760 760">
+          <line id="line-lens"    x1="380" y1="395" x2="255" y2="270"/>
+          <line id="line-glass"   x1="380" y1="395" x2="265" y2="225"/>
+          <line id="line-evf"     x1="380" y1="340" x2="418" y2="310"/>
+          <line id="line-screen"  x1="380" y1="445" x2="348" y2="520"/>
+          <line id="line-sensor"  x1="360" y1="393" x2="320" y2="393"/>
+          <line id="line-shutter" x1="358" y1="387" x2="310" y2="380"/>
+          <line id="line-pcb"     x1="415" y1="395" x2="460" y2="395"/>
+          <line id="line-grip"    x1="355" y1="403" x2="282" y2="403"/>
+          <line id="line-dial"    x1="387" y1="360" x2="387" y2="316"/>
+          <line id="line-mount"   x1="360" y1="390" x2="322" y2="390"/>
+          <line id="line-card"    x1="420" y1="381" x2="492" y2="381"/>
+          <line id="line-battery" x1="380" y1="455" x2="348" y2="540"/>
         </svg>
 
-        <!-- LENS -->
-        <div class="camera-part part-lens" data-name="FE 24-70mm f/2.8 GM" data-spec="G Master Series" data-desc="Zachary's go-to workhorse. Razor-sharp across the entire zoom range with beautiful bokeh wide open at f/2.8. Perfect for everything from portraits to action sports.">
-          <svg viewBox="0 0 140 180" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ═══ SONY α7R III BODY (centre) ═══ -->
+        <div class="camera-part part-body" data-name="Sony α7R III Body" data-spec="ILCE-7RM3 · Magnesium Alloy · 657g" data-desc="Weather-sealed magnesium alloy chassis. Compact full-frame design, dual card slots, 5-axis in-body image stabilisation and USB charging. The backbone of Zachary's entire kit.">
+          <svg viewBox="0 0 220 158" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="lensGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#3a3a3a"/>
-                <stop offset="50%" stop-color="#2a2a2a"/>
-                <stop offset="100%" stop-color="#1e1e1e"/>
-              </linearGradient>
-              <radialGradient id="glassGrad" cx="50%" cy="45%">
-                <stop offset="0%" stop-color="#4a5568" stop-opacity=".6"/>
-                <stop offset="60%" stop-color="#2d3748" stop-opacity=".8"/>
-                <stop offset="100%" stop-color="#1a202c"/>
-              </radialGradient>
+              <linearGradient id="bd_body" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e2e2e"/><stop offset="45%" stop-color="#1f1f1f"/><stop offset="100%" stop-color="#131313"/></linearGradient>
+              <linearGradient id="bd_top" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#383838"/><stop offset="100%" stop-color="#222"/></linearGradient>
+              <linearGradient id="bd_grip" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#161616"/><stop offset="100%" stop-color="#242424"/></linearGradient>
+              <radialGradient id="bd_mount" cx="50%" cy="50%"><stop offset="0%" stop-color="#050505"/><stop offset="75%" stop-color="#0c0c0c"/><stop offset="100%" stop-color="#1c1c1c"/></radialGradient>
+              <radialGradient id="bd_sensorpeek" cx="50%" cy="50%"><stop offset="0%" stop-color="#0d1f12"/><stop offset="100%" stop-color="#060d09"/></radialGradient>
+              <pattern id="bd_tex" x="0" y="0" width="2.8" height="2.8" patternUnits="userSpaceOnUse"><rect width="2.8" height="2.8" fill="#1a1a1a"/><circle cx="1.4" cy="1.4" r="0.55" fill="#111"/></pattern>
+              <filter id="bd_shadow"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.7"/></filter>
             </defs>
-            <rect x="15" y="20" width="110" height="150" rx="8" fill="url(#lensGrad)" stroke="#444" stroke-width=".5"/>
-            <g opacity=".3">
-              <line x1="20" y1="55" x2="120" y2="55" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="58" x2="120" y2="58" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="61" x2="120" y2="61" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="64" x2="120" y2="64" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="67" x2="120" y2="67" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="100" x2="120" y2="100" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="103" x2="120" y2="103" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="106" x2="120" y2="106" stroke="#555" stroke-width=".3"/>
-              <line x1="20" y1="109" x2="120" y2="109" stroke="#555" stroke-width=".3"/>
-            </g>
-            <ellipse cx="70" cy="30" rx="42" ry="12" fill="url(#glassGrad)" stroke="#555" stroke-width=".5"/>
-            <ellipse cx="62" cy="27" rx="15" ry="5" fill="rgba(255,255,255,.06)"/>
-            <text x="70" y="88" text-anchor="middle" font-size="5" fill="#555" font-family="Inter, sans-serif" letter-spacing="1.5">24-70mm</text>
-            <circle cx="25" cy="140" r="3" fill="#cc6633" opacity=".8"/>
-            <text x="33" y="142" font-size="4.5" fill="#888" font-family="Inter, sans-serif">GM</text>
+            <!-- shadow -->
+            <rect x="4" y="22" width="214" height="134" rx="5" fill="#000" opacity="0.5" transform="translate(2,3)"/>
+            <!-- body -->
+            <rect x="4" y="22" width="214" height="134" rx="5" fill="url(#bd_body)" stroke="#2c2c2c" stroke-width="0.8"/>
+            <!-- top panel -->
+            <rect x="4" y="5" width="214" height="22" rx="4" fill="url(#bd_top)" stroke="#333" stroke-width="0.5"/>
+            <!-- grip zone -->
+            <rect x="4" y="22" width="46" height="134" rx="5" fill="url(#bd_grip)"/>
+            <rect x="6" y="24" width="42" height="130" rx="3" fill="url(#bd_tex)" opacity="0.9"/>
+            <rect x="50" y="22" width="2" height="134" fill="rgba(0,0,0,0.45)"/>
+            <!-- top: mode dial -->
+            <circle cx="30" cy="14" r="9" fill="#262626" stroke="#3e3e3e" stroke-width="0.5"/>
+            <circle cx="30" cy="14" r="6" fill="#202020" stroke="#2e2e2e" stroke-width="0.3"/>
+            <text x="30" y="17" text-anchor="middle" font-size="4.5" fill="#777" font-family="Inter,sans-serif" font-weight="600">M</text>
+            <!-- top: exp comp dial -->
+            <circle cx="72" cy="12" r="8" fill="#232323" stroke="#3c3c3c" stroke-width="0.4"/>
+            <line x1="72" y1="5" x2="72" y2="7.5" stroke="#666" stroke-width="0.35"/><line x1="78.9" y1="7" x2="77" y2="8.5" stroke="#555" stroke-width="0.3"/><line x1="80" y1="13" x2="77.5" y2="13" stroke="#555" stroke-width="0.3"/><line x1="79" y1="18" x2="77" y2="16.8" stroke="#555" stroke-width="0.3"/><line x1="72" y1="19.5" x2="72" y2="17" stroke="#555" stroke-width="0.3"/><line x1="65" y1="18" x2="67" y2="16.8" stroke="#555" stroke-width="0.3"/><line x1="64" y1="13" x2="66.5" y2="13" stroke="#555" stroke-width="0.3"/><line x1="65" y1="7" x2="67" y2="8.5" stroke="#555" stroke-width="0.3"/>
+            <!-- SONY text -->
+            <text x="128" y="18" text-anchor="middle" font-size="8" fill="#999" font-family="Inter,sans-serif" font-weight="800" letter-spacing="3.5">SONY</text>
+            <!-- hot shoe -->
+            <rect x="162" y="6" width="20" height="9" rx="1" fill="#1a1a1a" stroke="#444" stroke-width="0.4"/>
+            <rect x="163.5" y="7.5" width="17" height="6" rx="0.5" fill="#141414" stroke="#555" stroke-width="0.25"/>
+            <line x1="168" y1="7.5" x2="168" y2="13.5" stroke="#333" stroke-width="0.3"/>
+            <line x1="174" y1="7.5" x2="174" y2="13.5" stroke="#333" stroke-width="0.3"/>
+            <!-- shutter button -->
+            <circle cx="92" cy="8" r="5.5" fill="#282828" stroke="#3e3e3e" stroke-width="0.5"/>
+            <circle cx="92" cy="8" r="3.5" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="0.3"/>
+            <!-- top C1 button -->
+            <rect x="100" y="5" width="10" height="8" rx="2" fill="#222" stroke="#333" stroke-width="0.3"/><text x="105" y="11" text-anchor="middle" font-size="3" fill="#555" font-family="Inter,sans-serif">C1</text>
+            <!-- drive dial -->
+            <circle cx="56" cy="12" r="6" fill="#242424" stroke="#3a3a3a" stroke-width="0.4"/>
+            <line x1="56" y1="7" x2="56" y2="8.5" stroke="#555" stroke-width="0.3"/>
+            <line x1="61" y1="9" x2="60" y2="10" stroke="#444" stroke-width="0.3"/>
+            <line x1="62" y1="13" x2="60.5" y2="13" stroke="#444" stroke-width="0.3"/>
+            <!-- body top edge -->
+            <line x1="4" y1="22" x2="218" y2="22" stroke="#2e2e2e" stroke-width="0.4"/>
+            <!-- E-mount opening -->
+            <circle cx="113" cy="95" r="46" fill="none" stroke="#282828" stroke-width="1.8"/>
+            <circle cx="113" cy="95" r="44" fill="url(#bd_mount)"/>
+            <circle cx="113" cy="95" r="40" fill="#070707"/>
+            <!-- sensor peek -->
+            <rect x="91" y="81" width="44" height="28" rx="1.5" fill="url(#bd_sensorpeek)" stroke="#1a3a20" stroke-width="0.4" opacity="0.8"/>
+            <!-- bayonet tabs -->
+            <path d="M108,49 h8 v6 h-8 Z" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.4"/>
+            <path d="M149,89 h6 v8 h-6 Z" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.4"/>
+            <path d="M108,136 h8 v6 h-8 Z" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.4"/>
+            <path d="M58,89 h6 v8 h-6 Z" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.4"/>
+            <!-- alignment dot red -->
+            <circle cx="118" cy="49.5" r="2" fill="#cc2222"/>
+            <!-- α7R label -->
+            <text x="155" y="110" font-size="7" fill="#555" font-family="Inter,sans-serif" font-style="italic">α</text>
+            <text x="162" y="110" font-size="6" fill="#cc3333" font-family="Inter,sans-serif" font-weight="700">7R</text>
+            <!-- right-side controls -->
+            <rect x="182" y="60" width="24" height="6" rx="2" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="0.3"/>
+            <rect x="183" y="61" width="10" height="4" rx="1.5" fill="#333"/>
+            <circle cx="190" cy="44" r="4" fill="#222" stroke="#333" stroke-width="0.4"/><circle cx="190" cy="44" r="2.5" fill="#c0392b" opacity="0.75"/>
+            <rect x="180" y="78" width="12" height="9" rx="2" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="0.3"/><text x="186" y="85" text-anchor="middle" font-size="3" fill="#555" font-family="Inter,sans-serif">C2</text>
+            <circle cx="190" cy="100" r="5.5" fill="#222" stroke="#2e2e2e" stroke-width="0.4"/><circle cx="190" cy="100" r="3" fill="#191919" stroke="#2a2a2a" stroke-width="0.3"/>
+            <circle cx="190" cy="124" r="7" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="0.4"/><circle cx="190" cy="124" r="2.5" fill="#252525"/>
+            <line x1="190" y1="117" x2="190" y2="131" stroke="#333" stroke-width="0.4"/><line x1="183" y1="124" x2="197" y2="124" stroke="#333" stroke-width="0.4"/>
+            <!-- bottom edge -->
+            <path d="M10 156 Q4 156 4 150" fill="none" stroke="#252525" stroke-width="0.4"/>
+            <path d="M210 156 Q218 156 218 150" fill="none" stroke="#252525" stroke-width="0.4"/>
+            <!-- subtle top specular -->
+            <rect x="6" y="23" width="212" height="1.5" rx="0.8" fill="rgba(255,255,255,0.04)"/>
           </svg>
         </div>
 
-        <!-- CAMERA BODY -->
-        <div class="camera-part part-body" data-name="Sony α7R III Body" data-spec="ILCE-7RM3 · 657g" data-desc="Magnesium alloy chassis with weather sealing throughout. Compact full-frame design that can handle any shooting condition from desert sun to mountain snow.">
-          <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg">
+        <!-- ═══ ZEISS FE 55mm f/1.8 ZA LENS ═══ -->
+        <div class="camera-part part-lens" data-name="Zeiss FE 55mm f/1.8 ZA" data-spec="T* Coating · E-Mount · 281g" data-desc="Zachary's sharpest prime. Sonnar optical design delivers near-perfect resolution across the full frame. The T* anti-reflective coating virtually eliminates flare. Razor-sharp from f/1.8 with stunning three-dimensional bokeh.">
+          <svg viewBox="0 0 160 175" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#2a2a2a"/>
-                <stop offset="100%" stop-color="#1a1a1a"/>
-              </linearGradient>
+              <linearGradient id="ln_barrel" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a1a1a"/><stop offset="30%" stop-color="#2e2e2e"/><stop offset="60%" stop-color="#262626"/><stop offset="100%" stop-color="#181818"/></linearGradient>
+              <linearGradient id="ln_ring1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#222"/><stop offset="40%" stop-color="#3a3a3a"/><stop offset="100%" stop-color="#1e1e1e"/></linearGradient>
+              <radialGradient id="ln_glass" cx="42%" cy="38%"><stop offset="0%" stop-color="#6a8fa8" stop-opacity="0.9"/><stop offset="18%" stop-color="#4a7090" stop-opacity="0.8"/><stop offset="40%" stop-color="#2a4a60" stop-opacity="0.9"/><stop offset="65%" stop-color="#1a2e40" stop-opacity="0.95"/><stop offset="85%" stop-color="#0e1e2c"/><stop offset="100%" stop-color="#080e14"/></radialGradient>
+              <radialGradient id="ln_inner1" cx="38%" cy="34%"><stop offset="0%" stop-color="#8aaabb" stop-opacity="0.4"/><stop offset="50%" stop-color="#3a5a6a" stop-opacity="0.3"/><stop offset="100%" stop-color="#0a1620" stop-opacity="0.8"/></radialGradient>
+              <radialGradient id="ln_flare" cx="35%" cy="30%"><stop offset="0%" stop-color="rgba(140,200,255,0.25)"/><stop offset="40%" stop-color="rgba(80,140,200,0.1)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></radialGradient>
+              <linearGradient id="ln_mount" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#5a3a18"/><stop offset="30%" stop-color="#8a5e28"/><stop offset="55%" stop-color="#a06e30"/><stop offset="75%" stop-color="#7a4e22"/><stop offset="100%" stop-color="#4a2e12"/></linearGradient>
+              <linearGradient id="ln_zeissband" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0a2a5a"/><stop offset="40%" stop-color="#1a4a9a"/><stop offset="60%" stop-color="#1040a0"/><stop offset="100%" stop-color="#0a2060"/></linearGradient>
+              <pattern id="ln_knurl" x="0" y="0" width="3" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="3" y2="6" stroke="#333" stroke-width="0.5"/><line x1="3" y1="0" x2="6" y2="6" stroke="#333" stroke-width="0.5"/></pattern>
+              <filter id="ln_glow"><feGaussianBlur stdDeviation="2" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
             </defs>
-            <rect x="5" y="15" width="230" height="140" rx="6" fill="url(#bodyGrad)" stroke="#3a3a3a" stroke-width=".8"/>
-            <rect x="5" y="15" width="230" height="25" rx="6" fill="#252525" stroke="#3a3a3a" stroke-width=".5"/>
-            <text x="120" y="32" text-anchor="middle" font-size="8" fill="#666" font-family="Inter, sans-serif" letter-spacing="3" font-weight="600">SONY</text>
-            <text x="180" y="32" font-size="5.5" fill="#555" font-family="Inter, sans-serif" letter-spacing="1">α7R III</text>
-            <circle cx="85" cy="95" r="38" fill="none" stroke="#3a3a3a" stroke-width="1"/>
-            <circle cx="85" cy="95" r="32" fill="#161616" stroke="#333" stroke-width=".5"/>
-            <circle cx="85" cy="60" r="2" fill="#444"/>
-            <circle cx="118" cy="85" r="2" fill="#444"/>
-            <circle cx="85" cy="130" r="2" fill="#444"/>
-            <rect x="5" y="40" width="30" height="100" rx="4" fill="#222" stroke="#333" stroke-width=".5"/>
-            <g opacity=".2">
-              <line x1="10" y1="50" x2="30" y2="50" stroke="#555" stroke-width=".3"/>
-              <line x1="10" y1="53" x2="30" y2="53" stroke="#555" stroke-width=".3"/>
-              <line x1="10" y1="56" x2="30" y2="56" stroke="#555" stroke-width=".3"/>
-              <line x1="10" y1="59" x2="30" y2="59" stroke="#555" stroke-width=".3"/>
-              <line x1="10" y1="62" x2="30" y2="62" stroke="#555" stroke-width=".3"/>
-              <line x1="10" y1="65" x2="30" y2="65" stroke="#555" stroke-width=".3"/>
-              <line x1="10" y1="68" x2="30" y2="68" stroke="#555" stroke-width=".3"/>
-              <line x1="10" y1="71" x2="30" y2="71" stroke="#555" stroke-width=".3"/>
-            </g>
+            <!-- outer barrel shadow -->
+            <ellipse cx="80" cy="90" rx="65" ry="68" fill="rgba(0,0,0,0.5)" transform="translate(3,4)"/>
+            <!-- outer barrel body -->
+            <rect x="15" y="22" width="130" height="148" rx="10" fill="url(#ln_barrel)" stroke="#333" stroke-width="0.7"/>
+            <!-- top cap -->
+            <ellipse cx="80" cy="22" rx="65" ry="10" fill="#252525" stroke="#3a3a3a" stroke-width="0.6"/>
+            <!-- knurled focus ring zone -->
+            <rect x="15" y="55" width="130" height="50" rx="3" fill="url(#ln_knurl)" opacity="0.6"/>
+            <rect x="15" y="55" width="130" height="50" rx="3" fill="url(#ln_barrel)" opacity="0.4"/>
+            <!-- ring separator lines -->
+            <line x1="15" y1="35" x2="145" y2="35" stroke="#3e3e3e" stroke-width="0.7"/>
+            <line x1="15" y1="55" x2="145" y2="55" stroke="#3e3e3e" stroke-width="0.8"/>
+            <line x1="15" y1="105" x2="145" y2="105" stroke="#3e3e3e" stroke-width="0.7"/>
+            <line x1="15" y1="125" x2="145" y2="125" stroke="#3e3e3e" stroke-width="0.8"/>
+            <line x1="15" y1="145" x2="145" y2="145" stroke="#5a3a18" stroke-width="1.2"/>
+            <!-- focus distance markings -->
+            <text x="30" y="118" font-size="4" fill="#555" font-family="Inter,sans-serif" letter-spacing="1">0.5</text>
+            <text x="52" y="118" font-size="4" fill="#666" font-family="Inter,sans-serif" letter-spacing="1">0.8</text>
+            <text x="74" y="118" font-size="4" fill="#777" font-family="Inter,sans-serif" letter-spacing="1">1.2</text>
+            <text x="96" y="118" font-size="4" fill="#666" font-family="Inter,sans-serif" letter-spacing="1">2.0</text>
+            <text x="117" y="118" font-size="4" fill="#555" font-family="Inter,sans-serif" letter-spacing="1">∞</text>
+            <!-- aperture ring markings -->
+            <text x="30" y="46" font-size="4" fill="#666" font-family="Inter,sans-serif">1.8</text>
+            <text x="50" y="46" font-size="4" fill="#666" font-family="Inter,sans-serif">2.8</text>
+            <text x="70" y="46" font-size="4" fill="#666" font-family="Inter,sans-serif">5.6</text>
+            <text x="93" y="46" font-size="4" fill="#666" font-family="Inter,sans-serif">11</text>
+            <text x="113" y="46" font-size="4" fill="#666" font-family="Inter,sans-serif">22</text>
+            <!-- Zeiss band (teal/blue) -->
+            <rect x="15" y="126" width="130" height="18" rx="2" fill="url(#ln_zeissband)"/>
+            <text x="80" y="138" text-anchor="middle" font-size="6.5" fill="#a0c4ff" font-family="Inter,sans-serif" font-weight="700" letter-spacing="3">ZEISS</text>
+            <!-- T* marking -->
+            <text x="27" y="137" font-size="5" fill="#7aa0cc" font-family="Inter,sans-serif">T*</text>
+            <!-- FE 1.8/55 text -->
+            <text x="80" y="156" text-anchor="middle" font-size="5.5" fill="#999" font-family="Inter,sans-serif" letter-spacing="1.5">FE 1.8 / 55</text>
+            <!-- E-mount base (copper ring) -->
+            <rect x="15" y="145" width="130" height="25" rx="5" fill="url(#ln_mount)" stroke="#6a4020" stroke-width="0.6"/>
+            <!-- mount tab -->
+            <rect x="118" y="148" width="8" height="18" rx="1" fill="#4a3010" stroke="#6a4525" stroke-width="0.4"/>
+            <!-- front glass element (main lens face) -->
+            <ellipse cx="80" cy="22" rx="58" ry="9" fill="url(#ln_glass)"/>
+            <!-- Aperture representation inside glass -->
+            <ellipse cx="80" cy="22" rx="38" ry="5.8" fill="url(#ln_inner1)"/>
+            <ellipse cx="80" cy="22" rx="22" ry="3.4" fill="rgba(10,20,30,0.9)"/>
+            <!-- multicoat shimmer  -->
+            <ellipse cx="62" cy="18" rx="18" ry="3.5" fill="url(#ln_flare)" opacity="0.8"/>
+            <ellipse cx="52" cy="17" rx="8" ry="2" fill="rgba(200,240,255,0.12)"/>
+            <!-- red dot -->
+            <circle cx="25" cy="165" r="2.2" fill="#cc2222"/>
+            <!-- side specular -->
+            <rect x="16" y="24" width="1.4" height="140" rx="0.7" fill="rgba(255,255,255,0.05)"/>
+            <rect x="144" y="24" width="1.2" height="140" rx="0.6" fill="rgba(0,0,0,0.4)"/>
           </svg>
         </div>
 
-        <!-- EVF / Viewfinder -->
-        <div class="camera-part part-evf" data-name="Electronic Viewfinder" data-spec="3.69M dots · OLED" data-desc="Quad-VGA OLED Tru-Finder with 0.78x magnification. What Zachary sees in real-time — accurate color and exposure preview before the shutter fires.">
-          <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
-            <rect x="5" y="5" width="70" height="50" rx="4" fill="#222" stroke="#3a3a3a" stroke-width=".8"/>
-            <rect x="20" y="12" width="40" height="20" rx="3" fill="#1a1a1a" stroke="#444" stroke-width=".5"/>
-            <rect x="15" y="35" width="50" height="15" rx="6" fill="#2a2a2a" stroke="#3a3a3a" stroke-width=".5"/>
-            <circle cx="68" cy="30" r="4" fill="none" stroke="#444" stroke-width=".5"/>
-            <line x1="68" y1="27" x2="68" y2="33" stroke="#555" stroke-width=".4"/>
-          </svg>
-        </div>
-
-        <!-- LCD Screen -->
-        <div class="camera-part part-screen" data-name="3.0&quot; Tilting LCD" data-spec="1.44M dots · Touch-enabled" data-desc="Tilting touchscreen for live view composition and menu navigation. Locks flat against the body for protection, tilts up 107° and down 41° for creative angles.">
-          <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="2" width="140" height="8" rx="2" fill="#252525" stroke="#333" stroke-width=".5"/>
-            <rect x="5" y="10" width="150" height="95" rx="3" fill="#1a1a1a" stroke="#333" stroke-width=".8"/>
-            <rect x="12" y="16" width="136" height="82" rx="1" fill="#111" stroke="#2a2a2a" stroke-width=".3"/>
-            <rect x="12" y="16" width="136" height="30" rx="1" fill="rgba(255,255,255,.02)"/>
-            <line x1="80" y1="40" x2="80" y2="75" stroke="#333" stroke-width=".3"/>
-            <line x1="45" y1="57" x2="115" y2="57" stroke="#333" stroke-width=".3"/>
-            <rect x="73" y="50" width="14" height="14" rx="1" fill="none" stroke="#555" stroke-width=".3"/>
-          </svg>
-        </div>
-
-        <!-- Image Sensor -->
-        <div class="camera-part part-sensor" data-name="42.4MP BSI CMOS Sensor" data-spec="Full Frame · 35.9 × 24mm" data-desc="Back-illuminated Exmor R sensor — the heart of the camera. 42.4 megapixels with no anti-aliasing filter for maximum detail. ISO range of 100–32,000 expandable to 102,400.">
-          <svg viewBox="0 0 70 52" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="sensorGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#2d4a3a"/>
-                <stop offset="50%" stop-color="#1a3a2a"/>
-                <stop offset="100%" stop-color="#152e22"/>
-              </linearGradient>
-            </defs>
-            <rect x="2" y="2" width="66" height="48" rx="2" fill="#1a2a1e" stroke="#2a4a35" stroke-width=".5"/>
-            <rect x="11" y="8" width="48" height="36" rx="1" fill="url(#sensorGrad)" stroke="#3a5a45" stroke-width=".5"/>
-            <g opacity=".15">
-              <line x1="20" y1="8" x2="20" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
-              <line x1="30" y1="8" x2="30" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
-              <line x1="40" y1="8" x2="40" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
-              <line x1="50" y1="8" x2="50" y2="44" stroke="#5a8a6a" stroke-width=".2"/>
-              <line x1="11" y1="18" x2="59" y2="18" stroke="#5a8a6a" stroke-width=".2"/>
-              <line x1="11" y1="28" x2="59" y2="28" stroke="#5a8a6a" stroke-width=".2"/>
-              <line x1="11" y1="38" x2="59" y2="38" stroke="#5a8a6a" stroke-width=".2"/>
-            </g>
-            <g opacity=".3">
-              <line x1="5" y1="15" x2="11" y2="15" stroke="#aaa" stroke-width=".2"/>
-              <line x1="5" y1="25" x2="11" y2="25" stroke="#aaa" stroke-width=".2"/>
-              <line x1="5" y1="35" x2="11" y2="35" stroke="#aaa" stroke-width=".2"/>
-              <line x1="59" y1="15" x2="65" y2="15" stroke="#aaa" stroke-width=".2"/>
-              <line x1="59" y1="25" x2="65" y2="25" stroke="#aaa" stroke-width=".2"/>
-              <line x1="59" y1="35" x2="65" y2="35" stroke="#aaa" stroke-width=".2"/>
-            </g>
-          </svg>
-        </div>
-
-        <!-- Grip -->
-        <div class="camera-part part-grip" data-name="Ergonomic Grip" data-spec="Textured rubber · Deep contour" data-desc="Redesigned deep grip for all-day shooting comfort. Critical when Zachary is on a 6-hour sports shoot or hauling gear through rough terrain.">
-          <svg viewBox="0 0 65 150" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10,8 Q5,8 5,15 L5,130 Q5,142 15,142 L45,142 Q55,142 58,130 L60,20 Q60,8 50,8 Z" fill="#222" stroke="#3a3a3a" stroke-width=".8"/>
-            <g opacity=".25">
-              <line x1="12" y1="25" x2="50" y2="25" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="30" x2="50" y2="30" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="35" x2="50" y2="35" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="40" x2="50" y2="40" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="45" x2="50" y2="45" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="50" x2="50" y2="50" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="55" x2="50" y2="55" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="60" x2="50" y2="60" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="65" x2="50" y2="65" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="70" x2="50" y2="70" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="75" x2="50" y2="75" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="80" x2="50" y2="80" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="85" x2="50" y2="85" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="90" x2="50" y2="90" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="95" x2="50" y2="95" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="100" x2="50" y2="100" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="105" x2="50" y2="105" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="110" x2="50" y2="110" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="115" x2="50" y2="115" stroke="#555" stroke-width=".4"/>
-              <line x1="12" y1="120" x2="50" y2="120" stroke="#555" stroke-width=".4"/>
-            </g>
-            <ellipse cx="40" cy="12" rx="8" ry="4" fill="#333" stroke="#444" stroke-width=".5"/>
-          </svg>
-        </div>
-
-        <!-- Top Dials -->
-        <div class="camera-part part-dial-top" data-name="Control Dials" data-spec="Mode · Exposure Comp · Custom" data-desc="Dual control dials plus dedicated exposure compensation dial. Quick access to shooting mode, drive mode, and custom settings without diving into menus.">
-          <svg viewBox="0 0 90 35" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="22" cy="17" r="14" fill="#252525" stroke="#444" stroke-width=".6"/>
-            <circle cx="22" cy="17" r="10" fill="#222" stroke="#3a3a3a" stroke-width=".3"/>
-            <text x="22" y="15" text-anchor="middle" font-size="3.5" fill="#777" font-family="Inter, sans-serif">M</text>
-            <text x="22" y="21" text-anchor="middle" font-size="2.5" fill="#555" font-family="Inter, sans-serif">MODE</text>
-            <circle cx="55" cy="17" r="12" fill="#2a2a2a" stroke="#444" stroke-width=".6"/>
-            <g opacity=".4">
-              <line x1="55" y1="7" x2="55" y2="10" stroke="#888" stroke-width=".3"/>
-              <line x1="63" y1="10" x2="61" y2="12" stroke="#888" stroke-width=".3"/>
-              <line x1="65" y1="17" x2="62" y2="17" stroke="#888" stroke-width=".3"/>
-              <line x1="63" y1="24" x2="61" y2="22" stroke="#888" stroke-width=".3"/>
-              <line x1="55" y1="27" x2="55" y2="24" stroke="#888" stroke-width=".3"/>
-              <line x1="47" y1="24" x2="49" y2="22" stroke="#888" stroke-width=".3"/>
-              <line x1="45" y1="17" x2="48" y2="17" stroke="#888" stroke-width=".3"/>
-              <line x1="47" y1="10" x2="49" y2="12" stroke="#888" stroke-width=".3"/>
-            </g>
-            <rect x="73" y="10" width="14" height="14" rx="3" fill="#252525" stroke="#444" stroke-width=".4"/>
-            <text x="80" y="19" text-anchor="middle" font-size="3.5" fill="#666" font-family="Inter, sans-serif">C1</text>
-          </svg>
-        </div>
-
-        <!-- Lens Mount -->
-        <div class="camera-part part-mount" data-name="Sony E-Mount" data-spec="18mm flange distance" data-desc="Sony's full-frame E-mount system. Short flange distance means compatibility with a massive ecosystem of native lenses plus nearly any adapted glass from Canon, Nikon, Leica, and more.">
+        <!-- ═══ FRONT GLASS ELEMENT ═══ -->
+        <div class="camera-part part-glass" data-name="Front Glass Element" data-spec="Sonnar · 7 elements, 5 groups" data-desc="The precision-ground front element of the Zeiss Sonnar T* design. Multi-layer T* anti-reflective coating reduces flare and ghosting to near zero. The glass that separates a Zeiss from everything else.">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#3a3a3a" stroke-width="1"/>
-            <circle cx="50" cy="50" r="40" fill="#161616" stroke="#333" stroke-width=".5"/>
-            <circle cx="50" cy="50" r="30" fill="#111" stroke="#2a2a2a" stroke-width=".3"/>
-            <g opacity=".5">
-              <circle cx="30" cy="25" r="1.5" fill="#886622"/>
-              <circle cx="20" cy="40" r="1.5" fill="#886622"/>
-              <circle cx="20" cy="60" r="1.5" fill="#886622"/>
-              <circle cx="30" cy="75" r="1.5" fill="#886622"/>
-              <circle cx="50" cy="83" r="1.5" fill="#886622"/>
-              <circle cx="70" cy="75" r="1.5" fill="#886622"/>
-              <circle cx="80" cy="60" r="1.5" fill="#886622"/>
-              <circle cx="80" cy="40" r="1.5" fill="#886622"/>
-              <circle cx="70" cy="25" r="1.5" fill="#886622"/>
+            <defs>
+              <radialGradient id="gl_coat" cx="40%" cy="36%"><stop offset="0%" stop-color="#7ab0d0" stop-opacity="0.95"/><stop offset="12%" stop-color="#5590b5" stop-opacity="0.9"/><stop offset="28%" stop-color="#3a70a0"/><stop offset="50%" stop-color="#1a4060"/><stop offset="72%" stop-color="#0e2a40"/><stop offset="88%" stop-color="#081828"/><stop offset="100%" stop-color="#040c14"/></radialGradient>
+              <radialGradient id="gl_inner" cx="38%" cy="34%"><stop offset="0%" stop-color="rgba(160,220,255,0.5)"/><stop offset="35%" stop-color="rgba(60,130,200,0.3)"/><stop offset="70%" stop-color="rgba(10,40,80,0.2)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></radialGradient>
+              <radialGradient id="gl_rim" cx="50%" cy="50%"><stop offset="72%" stop-color="transparent"/><stop offset="85%" stop-color="#2a2a2a"/><stop offset="100%" stop-color="#111"/></radialGradient>
+              <radialGradient id="gl_iridescent" cx="55%" cy="45%"><stop offset="0%" stop-color="rgba(255,120,80,0.15)"/><stop offset="40%" stop-color="rgba(80,200,255,0.12)"/><stop offset="70%" stop-color="rgba(120,80,200,0.1)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></radialGradient>
+              <filter id="gl_blur"><feGaussianBlur stdDeviation="0.8"/></filter>
+            </defs>
+            <!-- rim / barrel end -->
+            <circle cx="50" cy="50" r="48" fill="#1a1a1a" stroke="#2e2e2e" stroke-width="1"/>
+            <circle cx="50" cy="50" r="44" fill="#111" stroke="#252525" stroke-width="0.6"/>
+            <!-- scalloped retaining ring detail -->
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#1e1e1e" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <!-- main glass -->
+            <circle cx="50" cy="50" r="38" fill="url(#gl_coat)"/>
+            <!-- inner element  -->
+            <circle cx="50" cy="50" r="26" fill="url(#gl_inner)"/>
+            <!-- deep black centre -->
+            <circle cx="50" cy="50" r="14" fill="rgba(0,5,10,0.95)"/>
+            <!-- aperture blade hints -->
+            <g opacity="0.25">
+              <path d="M50,36 L46,48 L50,50 Z" fill="#1a3050"/><path d="M58,39 L50,48 L50,50 Z" fill="#1a3050"/><path d="M64,47 L52,50 L50,50 Z" fill="#1a3050"/><path d="M62,56 L50,52 L50,50 Z" fill="#1a3050"/><path d="M55,63 L50,52 L50,50 Z" fill="#1a3050"/><path d="M46,63 L50,52 L50,50 Z" fill="#1a3050"/><path d="M38,57 L50,50 L50,50 Z" fill="#1a3050"/><path d="M36,48 L50,50 L50,50 Z" fill="#1a3050"/><path d="M42,39 L50,50 L50,50 Z" fill="#1a3050"/>
             </g>
-            <rect x="88" y="45" width="8" height="10" rx="1" fill="#2a2a2a" stroke="#333" stroke-width=".3"/>
+            <!-- iridescent multicoat shimmer -->
+            <circle cx="50" cy="50" r="38" fill="url(#gl_iridescent)" opacity="0.9"/>
+            <!-- specular highlight (top-left) -->
+            <ellipse cx="36" cy="34" rx="14" ry="7" fill="rgba(220,240,255,0.22)" transform="rotate(-25 36 34)"/>
+            <ellipse cx="32" cy="30" rx="6" ry="3" fill="rgba(255,255,255,0.18)" transform="rotate(-25 32 30)"/>
+            <!-- subtle secondary highlight (bottom-right) -->
+            <ellipse cx="65" cy="66" rx="6" ry="3" fill="rgba(100,180,255,0.08)" transform="rotate(-25 65 66)"/>
+            <!-- rim light -->
+            <circle cx="50" cy="50" r="38" fill="url(#gl_rim)"/>
           </svg>
         </div>
 
-        <!-- Dual Card Slots -->
-        <div class="camera-part part-card-slot" data-name="Dual SD Card Slots" data-spec="UHS-I / UHS-II" data-desc="Two card slots for backup redundancy or overflow. Slot 1 is UHS-II for fast burst writing, Slot 2 handles UHS-I. Zachary shoots backup to both — never risk losing the shot.">
-          <svg viewBox="0 0 50 70" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="3" width="44" height="64" rx="3" fill="#1e1e1e" stroke="#3a3a3a" stroke-width=".6"/>
-            <rect x="8" y="8" width="34" height="24" rx="2" fill="#2a2a2a" stroke="#444" stroke-width=".4"/>
-            <text x="25" y="22" text-anchor="middle" font-size="3.5" fill="#666" font-family="Inter, sans-serif" letter-spacing=".5">SD 1</text>
-            <text x="25" y="28" text-anchor="middle" font-size="2.5" fill="#555" font-family="Inter, sans-serif">UHS-II</text>
-            <rect x="8" y="38" width="34" height="24" rx="2" fill="#2a2a2a" stroke="#444" stroke-width=".4"/>
-            <text x="25" y="52" text-anchor="middle" font-size="3.5" fill="#666" font-family="Inter, sans-serif" letter-spacing=".5">SD 2</text>
-            <text x="25" y="58" text-anchor="middle" font-size="2.5" fill="#555" font-family="Inter, sans-serif">UHS-I</text>
+        <!-- ═══ IMAGE SENSOR ═══ -->
+        <div class="camera-part part-sensor" data-name="42.4MP BSI CMOS Sensor" data-spec="Full Frame · Exmor R · 35.9×24mm" data-desc="Back-illuminated full-frame sensor — the heart of the camera. 42.4 megapixels capture extraordinary detail, ISO 100–32,000 (expandable 50–102,400). No anti-aliasing filter means maximum resolving power on every frame.">
+          <svg viewBox="0 0 82 62" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="se_pcb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f2218"/><stop offset="50%" stop-color="#0a1a10"/><stop offset="100%" stop-color="#06100a"/></linearGradient>
+              <linearGradient id="se_die" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1e3a28"/><stop offset="40%" stop-color="#162e1e"/><stop offset="100%" stop-color="#0e1e14"/></linearGradient>
+              <linearGradient id="se_active" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#223c2c"/><stop offset="100%" stop-color="#142018"/></linearGradient>
+              <radialGradient id="se_specular" cx="30%" cy="25%"><stop offset="0%" stop-color="rgba(180,255,200,0.12)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></radialGradient>
+            </defs>
+            <!-- PCB substrate -->
+            <rect x="1" y="1" width="80" height="60" rx="2" fill="url(#se_pcb)" stroke="#1a3522" stroke-width="0.6"/>
+            <!-- sensor die package -->
+            <rect x="8" y="6" width="66" height="50" rx="1.5" fill="url(#se_die)" stroke="#2a4a35" stroke-width="0.5"/>
+            <!-- active area -->
+            <rect x="14" y="11" width="54" height="40" rx="1" fill="url(#se_active)" stroke="#3a5a42" stroke-width="0.4"/>
+            <!-- microlens grid overlay -->
+            <g opacity="0.12" stroke="#5aaa6a" stroke-width="0.15">
+              <line x1="14" y1="18.3" x2="68" y2="18.3"/><line x1="14" y1="25.7" x2="68" y2="25.7"/><line x1="14" y1="33" x2="68" y2="33"/><line x1="14" y1="40.3" x2="68" y2="40.3"/><line x1="14" y1="47.7" x2="68" y2="47.7"/>
+              <line x1="21.5" y1="11" x2="21.5" y2="51"/><line x1="29" y1="11" x2="29" y2="51"/><line x1="36.5" y1="11" x2="36.5" y2="51"/><line x1="44" y1="11" x2="44" y2="51"/><line x1="51.5" y1="11" x2="51.5" y2="51"/><line x1="59" y1="11" x2="59" y2="51"/>
+            </g>
+            <!-- bond wires left -->
+            <g opacity="0.4" stroke="#aaaaaa" stroke-width="0.25">
+              <path d="M4,15 Q8,13 8,15" fill="none"/><path d="M4,20 Q8,18 8,20" fill="none"/><path d="M4,25 Q8,23 8,25" fill="none"/><path d="M4,30 Q8,28 8,30" fill="none"/><path d="M4,35 Q8,33 8,35" fill="none"/><path d="M4,40 Q8,38 8,40" fill="none"/>
+            </g>
+            <!-- bond wires right -->
+            <g opacity="0.4" stroke="#aaaaaa" stroke-width="0.25">
+              <path d="M78,15 Q74,13 74,15" fill="none"/><path d="M78,20 Q74,18 74,20" fill="none"/><path d="M78,25 Q74,23 74,25" fill="none"/><path d="M78,30 Q74,28 74,30" fill="none"/><path d="M78,35 Q74,33 74,35" fill="none"/>
+            </g>
+            <!-- specular on die -->
+            <rect x="14" y="11" width="54" height="40" rx="1" fill="url(#se_specular)"/>
+            <!-- corner solder pads -->
+            <rect x="2" y="2" width="5" height="3" rx="0.5" fill="#2a3a2a" stroke="#3a5a3a" stroke-width="0.2"/>
+            <rect x="75" y="2" width="5" height="3" rx="0.5" fill="#2a3a2a" stroke="#3a5a3a" stroke-width="0.2"/>
+            <rect x="2" y="57" width="5" height="3" rx="0.5" fill="#2a3a2a" stroke="#3a5a3a" stroke-width="0.2"/>
+            <rect x="75" y="57" width="5" height="3" rx="0.5" fill="#2a3a2a" stroke="#3a5a3a" stroke-width="0.2"/>
+            <!-- Sony Exmor R label -->
+            <text x="41" y="33" text-anchor="middle" font-size="3.5" fill="#4a7a5a" font-family="Inter,sans-serif" letter-spacing="0.5">Exmor R</text>
+            <text x="41" y="39" text-anchor="middle" font-size="3" fill="#3a5a45" font-family="Inter,sans-serif">42.4MP · BSI</text>
           </svg>
         </div>
 
-        <!-- Battery -->
-        <div class="camera-part part-battery" data-name="NP-FZ100 Battery" data-spec="2280mAh · 530 shots rated" data-desc="High-capacity Z-series battery — a huge upgrade over the A7R II. Gets Zachary through full-day shoots without swapping. USB charging means topping off anywhere between sets.">
-          <svg viewBox="0 0 60 45" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="8" width="54" height="34" rx="3" fill="#252525" stroke="#3a3a3a" stroke-width=".6"/>
-            <rect x="15" y="4" width="30" height="6" rx="1" fill="#333" stroke="#444" stroke-width=".3"/>
-            <text x="30" y="25" text-anchor="middle" font-size="4" fill="#666" font-family="Inter, sans-serif" letter-spacing=".8">NP-FZ100</text>
-            <text x="30" y="33" text-anchor="middle" font-size="3" fill="#555" font-family="Inter, sans-serif">2280mAh</text>
-            <rect x="8" y="36" width="20" height="2" rx="1" fill="#3a6a3a" opacity=".6"/>
+        <!-- ═══ SHUTTER ASSEMBLY ═══ -->
+        <div class="camera-part part-shutter" data-name="Mechanical Shutter" data-spec="1/8000s max · 10fps · Anti-Distortion" data-desc="Focal-plane shutter rated to 500,000 actuations. Electronically controlled for precision timing — 1/8000s mechanical, 1/32000s silent electronic. Anti-distortion shutter reduces rolling-shutter on fast subjects.">
+          <svg viewBox="0 0 80 62" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sh_frame" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e2e2e"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
+              <linearGradient id="sh_blade" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#888"/><stop offset="40%" stop-color="#ccc"/><stop offset="70%" stop-color="#aaa"/><stop offset="100%" stop-color="#666"/></linearGradient>
+              <linearGradient id="sh_blade2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#666"/><stop offset="40%" stop-color="#bbb"/><stop offset="100%" stop-color="#555"/></linearGradient>
+              <radialGradient id="sh_aperture" cx="50%" cy="50%"><stop offset="0%" stop-color="#050505"/><stop offset="60%" stop-color="#0a0a0a"/><stop offset="100%" stop-color="#222"/></radialGradient>
+            </defs>
+            <!-- frame -->
+            <rect x="1" y="1" width="78" height="60" rx="3" fill="url(#sh_frame)" stroke="#3a3a3a" stroke-width="0.6"/>
+            <!-- curtain guide rails -->
+            <rect x="4" y="4" width="72" height="4" rx="1" fill="#252525" stroke="#3e3e3e" stroke-width="0.3"/>
+            <rect x="4" y="54" width="72" height="4" rx="1" fill="#252525" stroke="#3e3e3e" stroke-width="0.3"/>
+            <!-- shutter curtain blades -->
+            <!-- These are thin metallic blades in slightly open position -->
+            <g fill="url(#sh_blade)" stroke="#888" stroke-width="0.2">
+              <rect x="5" y="8" width="70" height="6" rx="0.5" transform="rotate(-1.5 40 11)"/>
+              <rect x="5" y="15" width="70" height="6" rx="0.5" transform="rotate(0.8 40 18)"/>
+              <rect x="5" y="22" width="70" height="6" rx="0.5" transform="rotate(-0.5 40 25)"/>
+            </g>
+            <g fill="url(#sh_blade2)" stroke="#777" stroke-width="0.2">
+              <rect x="5" y="29" width="70" height="6" rx="0.5" transform="rotate(1.2 40 32)"/>
+              <rect x="5" y="36" width="70" height="6" rx="0.5" transform="rotate(-0.8 40 39)"/>
+              <rect x="5" y="43" width="70" height="6" rx="0.5" transform="rotate(0.5 40 46)"/>
+              <rect x="5" y="49" width="70" height="5" rx="0.5"/>
+            </g>
+            <!-- blade highlight lines -->
+            <line x1="5" y1="8.8" x2="75" y2="8.8" stroke="rgba(255,255,255,0.25)" stroke-width="0.4"/>
+            <line x1="5" y1="15.8" x2="75" y2="15.8" stroke="rgba(255,255,255,0.2)" stroke-width="0.4"/>
+            <line x1="5" y1="22.8" x2="75" y2="22.8" stroke="rgba(255,255,255,0.18)" stroke-width="0.4"/>
+            <line x1="5" y1="29.8" x2="75" y2="29.8" stroke="rgba(255,255,255,0.15)" stroke-width="0.4"/>
+            <!-- corner actuator pins -->
+            <circle cx="6" cy="10" r="1.5" fill="#444" stroke="#555" stroke-width="0.3"/>
+            <circle cx="74" cy="10" r="1.5" fill="#444" stroke="#555" stroke-width="0.3"/>
+            <circle cx="6" cy="52" r="1.5" fill="#444" stroke="#555" stroke-width="0.3"/>
+            <circle cx="74" cy="52" r="1.5" fill="#444" stroke="#555" stroke-width="0.3"/>
+            <!-- label -->
+            <text x="40" y="59" text-anchor="middle" font-size="3" fill="#555" font-family="Inter,sans-serif" letter-spacing="1">SHUTTER · 1/8000s</text>
+          </svg>
+        </div>
+
+        <!-- ═══ MAIN PCB ═══ -->
+        <div class="camera-part part-pcb" data-name="Main Circuit Board" data-spec="BIONZ X Processor · 399-pt AF" data-desc="Sony's BIONZ X image processor handles 42.4MP raw files at 10fps with minimal buffer lag. The 399-point hybrid AF system including 325 phase-detection points runs off this board — enabling real-time eye and face tracking.">
+          <svg viewBox="0 0 115 82" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="pc_base" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d1a0d"/><stop offset="50%" stop-color="#0a1510"/><stop offset="100%" stop-color="#061008"/></linearGradient>
+              <linearGradient id="pc_chip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d0d1e"/></linearGradient>
+              <radialGradient id="pc_chip2" cx="30%" cy="30%"><stop offset="0%" stop-color="#252535"/><stop offset="100%" stop-color="#0f0f1e"/></radialGradient>
+              <pattern id="pc_trace" x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="5" x2="5" y2="0" stroke="#1a3520" stroke-width="0.25"/></pattern>
+            </defs>
+            <!-- PCB substrate -->
+            <rect x="1" y="1" width="113" height="80" rx="2" fill="url(#pc_base)" stroke="#1a3520" stroke-width="0.6"/>
+            <!-- trace layer -->
+            <rect x="1" y="1" width="113" height="80" rx="2" fill="url(#pc_trace)" opacity="0.5"/>
+            <!-- BIONZ X main chip -->
+            <rect x="32" y="18" width="38" height="38" rx="1" fill="url(#pc_chip)" stroke="#2a2a4a" stroke-width="0.5"/>
+            <rect x="34" y="20" width="34" height="34" rx="0.5" fill="#111120" stroke="#1a1a3a" stroke-width="0.3"/>
+            <!-- chip bond pads -->
+            <g stroke="#3a3a5a" stroke-width="0.25" opacity="0.8">
+              <line x1="32" y1="22" x2="28" y2="22"/><line x1="32" y1="26" x2="28" y2="26"/><line x1="32" y1="30" x2="28" y2="30"/><line x1="32" y1="34" x2="28" y2="34"/><line x1="32" y1="38" x2="28" y2="38"/><line x1="32" y1="42" x2="28" y2="42"/><line x1="32" y1="46" x2="28" y2="46"/><line x1="32" y1="50" x2="28" y2="50"/>
+              <line x1="70" y1="22" x2="74" y2="22"/><line x1="70" y1="26" x2="74" y2="26"/><line x1="70" y1="30" x2="74" y2="30"/><line x1="70" y1="34" x2="74" y2="34"/><line x1="70" y1="38" x2="74" y2="38"/><line x1="70" y1="42" x2="74" y2="42"/><line x1="70" y1="46" x2="74" y2="46"/><line x1="70" y1="50" x2="74" y2="50"/>
+              <line x1="36" y1="18" x2="36" y2="14"/><line x1="42" y1="18" x2="42" y2="14"/><line x1="48" y1="18" x2="48" y2="14"/><line x1="54" y1="18" x2="54" y2="14"/><line x1="60" y1="18" x2="60" y2="14"/><line x1="66" y1="18" x2="66" y2="14"/>
+              <line x1="36" y1="56" x2="36" y2="60"/><line x1="42" y1="56" x2="42" y2="60"/><line x1="48" y1="56" x2="48" y2="60"/><line x1="54" y1="56" x2="54" y2="60"/><line x1="60" y1="56" x2="60" y2="60"/><line x1="66" y1="56" x2="66" y2="60"/>
+            </g>
+            <text x="51" y="36" text-anchor="middle" font-size="4" fill="#6060a0" font-family="Inter,sans-serif" font-weight="700" letter-spacing="0.5">BIONZ X</text>
+            <text x="51" y="42" text-anchor="middle" font-size="2.8" fill="#4040808" font-family="Inter,sans-serif">Sony LSI</text>
+            <!-- secondary chips -->
+            <rect x="6" y="8" width="20" height="16" rx="1" fill="url(#pc_chip2)" stroke="#2a2a4a" stroke-width="0.4"/>
+            <text x="16" y="18" text-anchor="middle" font-size="3" fill="#5050808" font-family="Inter,sans-serif">RAM</text>
+            <rect x="6" y="30" width="18" height="14" rx="1" fill="url(#pc_chip2)" stroke="#2a2a4a" stroke-width="0.4"/>
+            <text x="15" y="39" text-anchor="middle" font-size="2.8" fill="#5050808" font-family="Inter,sans-serif">WiFi</text>
+            <rect x="88" y="8" width="20" height="14" rx="1" fill="url(#pc_chip2)" stroke="#2a2a4a" stroke-width="0.4"/>
+            <text x="98" y="17" text-anchor="middle" font-size="3" fill="#5050808" font-family="Inter,sans-serif">USB</text>
+            <rect x="88" y="28" width="20" height="16" rx="1" fill="url(#pc_chip2)" stroke="#2a2a4a" stroke-width="0.4"/>
+            <text x="98" y="37" text-anchor="middle" font-size="2.5" fill="#5050808" font-family="Inter,sans-serif">BT/NFC</text>
+            <!-- capacitors (small bumps) -->
+            <g fill="#1a3a1a" stroke="#2a5a2a" stroke-width="0.25">
+              <rect x="8" y="52" width="5" height="7" rx="1"/><rect x="15" y="52" width="5" height="7" rx="1"/><rect x="22" y="52" width="5" height="7" rx="1"/>
+              <rect x="82" y="52" width="5" height="7" rx="1"/><rect x="90" y="52" width="5" height="7" rx="1"/>
+              <rect x="82" y="62" width="5" height="5" rx="1"/><rect x="90" y="62" width="5" height="5" rx="1"/>
+            </g>
+            <!-- traces -->
+            <g stroke="#1a4020" stroke-width="0.5" fill="none" opacity="0.8">
+              <polyline points="26,16 29,16 29,37"/><polyline points="26,37 29,37 32,37"/><polyline points="74,37 80,37 80,16 88,16"/>
+              <polyline points="51,14 51,10 88,10 88,8"/>
+              <polyline points="51,60 51,66 20,66 20,59"/>
+            </g>
+            <!-- mounting holes -->
+            <circle cx="4" cy="4" r="2" fill="none" stroke="#1a4020" stroke-width="0.5"/>
+            <circle cx="111" cy="4" r="2" fill="none" stroke="#1a4020" stroke-width="0.5"/>
+            <circle cx="4" cy="78" r="2" fill="none" stroke="#1a4020" stroke-width="0.5"/>
+            <circle cx="111" cy="78" r="2" fill="none" stroke="#1a4020" stroke-width="0.5"/>
+          </svg>
+        </div>
+
+        <!-- ═══ EVF / VIEWFINDER ═══ -->
+        <div class="camera-part part-evf" data-name="Electronic Viewfinder" data-spec="3.69M dots · OLED · 0.78× Mag" data-desc="Quad-VGA OLED Tru-Finder. 0.78x magnification with 120fps refresh rate. What Zachary sees in real-time — accurate colour, exposure preview, and live histogram before the shutter fires. Zero blackout in burst mode.">
+          <svg viewBox="0 0 82 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ev_body" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#282828"/><stop offset="100%" stop-color="#181818"/></linearGradient>
+              <radialGradient id="ev_screen" cx="50%" cy="50%"><stop offset="0%" stop-color="#1a2a3a"/><stop offset="60%" stop-color="#0d1520"/><stop offset="100%" stop-color="#060c14"/></radialGradient>
+              <linearGradient id="ev_eyecup" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e1e1e"/><stop offset="100%" stop-color="#111"/></linearGradient>
+            </defs>
+            <!-- body -->
+            <rect x="2" y="2" width="78" height="56" rx="4" fill="url(#ev_body)" stroke="#333" stroke-width="0.7"/>
+            <!-- OLED panel housing -->
+            <rect x="10" y="8" width="55" height="34" rx="3" fill="#161616" stroke="#3a3a3a" stroke-width="0.5"/>
+            <!-- the OLED screen itself -->
+            <rect x="13" y="11" width="49" height="28" rx="1.5" fill="url(#ev_screen)"/>
+            <!-- scan lines (very faint) -->
+            <g opacity="0.06" stroke="#8080ff" stroke-width="0.3">
+              <line x1="13" y1="14" x2="62" y2="14"/><line x1="13" y1="17" x2="62" y2="17"/><line x1="13" y1="20" x2="62" y2="20"/><line x1="13" y1="23" x2="62" y2="23"/><line x1="13" y1="26" x2="62" y2="26"/><line x1="13" y1="29" x2="62" y2="29"/><line x1="13" y1="32" x2="62" y2="32"/><line x1="13" y1="35" x2="62" y2="35"/>
+            </g>
+            <!-- scene preview (tiny landscape in EVF) -->
+            <rect x="13" y="11" width="49" height="10" rx="1" fill="rgba(20,30,50,0.6)"/>
+            <ellipse cx="30" cy="16" rx="8" ry="4" fill="rgba(255,200,100,0.15)"/>
+            <rect x="20" y="30" width="5" height="9" rx="0.5" fill="rgba(50,80,50,0.3)"/>
+            <rect x="30" y="27" width="4" height="12" rx="0.5" fill="rgba(50,80,50,0.25)"/>
+            <!-- diopter adjust wheel -->
+            <rect x="67" y="10" width="10" height="24" rx="4" fill="#222" stroke="#333" stroke-width="0.4"/>
+            <g opacity="0.4">
+              <line x1="68" y1="14" x2="76" y2="14" stroke="#555" stroke-width="0.4"/>
+              <line x1="68" y1="17" x2="76" y2="17" stroke="#555" stroke-width="0.4"/>
+              <line x1="68" y1="20" x2="76" y2="20" stroke="#555" stroke-width="0.4"/>
+              <line x1="68" y1="23" x2="76" y2="23" stroke="#555" stroke-width="0.4"/>
+              <line x1="68" y1="26" x2="76" y2="26" stroke="#555" stroke-width="0.4"/>
+              <line x1="68" y1="29" x2="76" y2="29" stroke="#555" stroke-width="0.4"/>
+            </g>
+            <!-- eye cup -->
+            <rect x="10" y="44" width="55" height="16" rx="7" fill="url(#ev_eyecup)" stroke="#222" stroke-width="0.5"/>
+            <rect x="16" y="47" width="43" height="10" rx="5" fill="#151515" stroke="#1e1e1e" stroke-width="0.3"/>
+            <!-- sensor dots for eye detection -->
+            <circle cx="70" cy="50" r="2" fill="#1a1a1a" stroke="#333" stroke-width="0.3"/>
+            <circle cx="70" cy="50" r="0.8" fill="#2a2a2a"/>
+          </svg>
+        </div>
+
+        <!-- ═══ LCD SCREEN ═══ -->
+        <div class="camera-part part-screen" data-name="3.0″ Tilting Touchscreen" data-spec="1.44M dots · XtraFine LCD · Touch" data-desc="Tilting Xtra Fine LCD touchscreen for live view and menu navigation. Tilts 107° up and 41° down to nail high and low angles. Touch-to-focus and touch shutter make handheld shots effortless.">
+          <svg viewBox="0 0 158 110" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sc_hinge" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e2e2e"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
+              <linearGradient id="sc_body" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#262626"/><stop offset="100%" stop-color="#181818"/></linearGradient>
+              <radialGradient id="sc_display" cx="30%" cy="25%"><stop offset="0%" stop-color="#1c2e40"/><stop offset="40%" stop-color="#0f1e30"/><stop offset="100%" stop-color="#060d18"/></radialGradient>
+              <radialGradient id="sc_content" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(100,160,240,0.2)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></radialGradient>
+            </defs>
+            <!-- hinge bar -->
+            <rect x="5" y="2" width="148" height="9" rx="2" fill="url(#sc_hinge)" stroke="#2e2e2e" stroke-width="0.5"/>
+            <!-- hinge detail -->
+            <circle cx="22" cy="6.5" r="3" fill="#222" stroke="#333" stroke-width="0.4"/>
+            <circle cx="136" cy="6.5" r="3" fill="#222" stroke="#333" stroke-width="0.4"/>
+            <line x1="25" y1="6.5" x2="133" y2="6.5" stroke="#2a2a2a" stroke-width="1.5"/>
+            <!-- screen chassis -->
+            <rect x="2" y="11" width="154" height="97" rx="3" fill="url(#sc_body)" stroke="#2e2e2e" stroke-width="0.7"/>
+            <!-- bezel -->
+            <rect x="5" y="14" width="148" height="91" rx="2" fill="#111" stroke="#1e1e1e" stroke-width="0.3"/>
+            <!-- display area -->
+            <rect x="9" y="17" width="140" height="85" rx="1.5" fill="url(#sc_display)"/>
+            <!-- scene content hint -->
+            <rect x="9" y="17" width="140" height="30" rx="1" fill="rgba(20,35,55,0.7)"/>
+            <ellipse cx="55" cy="32" rx="20" ry="10" fill="rgba(200,150,60,0.12)"/>
+            <!-- grid overlay (composition assist) -->
+            <line x1="55.6" y1="17" x2="55.6" y2="102" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+            <line x1="102.3" y1="17" x2="102.3" y2="102" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+            <line x1="9" y1="45.3" x2="149" y2="45.3" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+            <line x1="9" y1="73.7" x2="149" y2="73.7" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+            <!-- info bar bottom -->
+            <rect x="9" y="93" width="140" height="9" rx="1" fill="rgba(0,0,0,0.4)"/>
+            <rect x="12" y="95" width="22" height="5" rx="1" fill="#3a6a3a" opacity="0.7"/>
+            <text x="25" y="99.5" text-anchor="middle" font-size="3.5" fill="#aaa" font-family="Inter,sans-serif">1/250</text>
+            <text x="58" y="99.5" text-anchor="middle" font-size="3.5" fill="#aaa" font-family="Inter,sans-serif">f/1.8</text>
+            <text x="90" y="99.5" text-anchor="middle" font-size="3.5" fill="#aaa" font-family="Inter,sans-serif">ISO 400</text>
+            <!-- screen bezel shine top -->
+            <rect x="9" y="17" width="140" height="1" rx="0.5" fill="rgba(255,255,255,0.06)"/>
+          </svg>
+        </div>
+
+        <!-- ═══ E-MOUNT RING ═══ -->
+        <div class="camera-part part-mount" data-name="Sony E-Mount" data-spec="FE · 18mm Flange · Copper Ring" data-desc="Sony's full-frame E-mount with the signature copper-coloured bayonet ring. The short 18mm flange distance is key — it enables adapters for virtually every legacy lens system. Nine electrical contacts carry AF, IBIS correction data, and aperture control.">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="mt_outer" cx="50%" cy="50%"><stop offset="72%" stop-color="transparent"/><stop offset="80%" stop-color="#1a1a1a"/><stop offset="100%" stop-color="#0d0d0d"/></radialGradient>
+              <linearGradient id="mt_copper" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5a3010"/><stop offset="20%" stop-color="#8a5820"/><stop offset="35%" stop-color="#b07835"/><stop offset="50%" stop-color="#c88838"/><stop offset="65%" stop-color="#a06828"/><stop offset="80%" stop-color="#7a4818"/><stop offset="100%" stop-color="#4a2808"/></linearGradient>
+              <radialGradient id="mt_inner" cx="50%" cy="50%"><stop offset="0%" stop-color="#060606"/><stop offset="60%" stop-color="#0a0a0a"/><stop offset="100%" stop-color="#141414"/></radialGradient>
+              <radialGradient id="mt_contacts" cx="50%" cy="50%"><stop offset="0%" stop-color="#c0a060"/><stop offset="100%" stop-color="#806030"/></radialGradient>
+            </defs>
+            <!-- outer ring shadow -->
+            <circle cx="50" cy="50" r="48" fill="#000" opacity="0.4" transform="translate(1,2)"/>
+            <!-- outer body -->
+            <circle cx="50" cy="50" r="48" fill="#161616" stroke="#222" stroke-width="0.7"/>
+            <!-- copper bayonet ring -->
+            <circle cx="50" cy="50" r="44" fill="none" stroke="url(#mt_copper)" stroke-width="9"/>
+            <!-- copper ring detail — highlight arc -->
+            <path d="M18 30 A 38 38 0 0 1 82 30" fill="none" stroke="rgba(220,180,80,0.25)" stroke-width="4"/>
+            <!-- bayonet tabs (3 tabs at 120°) -->
+            <rect x="46" y="4" width="8" height="10" rx="2" fill="#222" stroke="#3a3a3a" stroke-width="0.5"/>
+            <rect x="46" y="4" width="8" height="10" rx="2" fill="#222" stroke="#3a3a3a" stroke-width="0.5" transform="rotate(120 50 50)"/>
+            <rect x="46" y="4" width="8" height="10" rx="2" fill="#222" stroke="#3a3a3a" stroke-width="0.5" transform="rotate(240 50 50)"/>
+            <!-- inner mount hole -->
+            <circle cx="50" cy="50" r="34" fill="url(#mt_inner)"/>
+            <circle cx="50" cy="50" r="30" fill="#070707"/>
+            <!-- electrical contacts (9 gold contacts in arc at bottom) -->
+            <g fill="url(#mt_contacts)" opacity="0.9">
+              <ellipse cx="32" cy="76" rx="2.5" ry="1.5" transform="rotate(-30 32 76)"/>
+              <ellipse cx="38" cy="81" rx="2.5" ry="1.5" transform="rotate(-15 38 81)"/>
+              <ellipse cx="45" cy="83" rx="2.5" ry="1.5"/>
+              <ellipse cx="52" cy="83" rx="2.5" ry="1.5"/>
+              <ellipse cx="59" cy="83" rx="2.5" ry="1.5"/>
+              <ellipse cx="65" cy="81" rx="2.5" ry="1.5" transform="rotate(15 65 81)"/>
+              <ellipse cx="70" cy="76" rx="2.5" ry="1.5" transform="rotate(30 70 76)"/>
+            </g>
+            <!-- alignment indicator dot (red) on copper ring -->
+            <circle cx="50" cy="7" r="3" fill="#cc2222"/>
+          </svg>
+        </div>
+
+        <!-- ═══ NP-FZ100 BATTERY ═══ -->
+        <div class="camera-part part-battery" data-name="NP-FZ100 Battery" data-spec="2280mAh · 7.2V · 530 shots rated" data-desc="High-capacity Z-series lithium-ion — a massive upgrade over earlier Sony bodies. USB-C charging means topping off anywhere between sets. Zachary carries two and a charger on every shoot — never miss the shot on a dead battery.">
+          <svg viewBox="0 0 65 46" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bt_body" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#282828"/><stop offset="60%" stop-color="#1e1e1e"/><stop offset="100%" stop-color="#161616"/></linearGradient>
+              <linearGradient id="bt_cell" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a4a6a"/><stop offset="50%" stop-color="#1a3050"/><stop offset="100%" stop-color="#101e30"/></linearGradient>
+              <linearGradient id="bt_level" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2a7a3a"/><stop offset="100%" stop-color="#3a9a4a"/></linearGradient>
+            </defs>
+            <!-- body shadow -->
+            <rect x="3" y="10" width="60" height="36" rx="3" fill="#000" opacity="0.5" transform="translate(1,2)"/>
+            <!-- main body -->
+            <rect x="3" y="10" width="60" height="36" rx="3" fill="url(#bt_body)" stroke="#333" stroke-width="0.6"/>
+            <!-- terminal contacts top -->
+            <rect x="13" y="4" width="10" height="8" rx="1" fill="#2e2e2e" stroke="#3e3e3e" stroke-width="0.4"/>
+            <rect x="27" y="4" width="10" height="8" rx="1" fill="#2e2e2e" stroke="#3e3e3e" stroke-width="0.4"/>
+            <rect x="41" y="4" width="10" height="8" rx="1" fill="#1a1a1a" stroke="#3e3e3e" stroke-width="0.4"/>
+            <!-- contact surfaces (gold) -->
+            <rect x="14" y="5" width="8" height="5" rx="0.5" fill="#b08020" stroke="#c09030" stroke-width="0.2" opacity="0.8"/>
+            <rect x="28" y="5" width="8" height="5" rx="0.5" fill="#b08020" stroke="#c09030" stroke-width="0.2" opacity="0.8"/>
+            <rect x="42" y="5" width="8" height="5" rx="0.5" fill="#1a1a1a" stroke="#333" stroke-width="0.2"/>
+            <!-- cell window -->
+            <rect x="8" y="15" width="49" height="24" rx="2" fill="url(#bt_cell)" stroke="#2a3a5a" stroke-width="0.4"/>
+            <!-- charge level indicator -->
+            <rect x="10" y="35" width="40" height="2.5" rx="1" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.2"/>
+            <rect x="10" y="35" width="33" height="2.5" rx="1" fill="url(#bt_level)"/>
+            <!-- Sony label -->
+            <text x="32" y="27" text-anchor="middle" font-size="5" fill="#5a7a9a" font-family="Inter,sans-serif" font-weight="700" letter-spacing="1.5">NP-FZ100</text>
+            <text x="32" y="34" text-anchor="middle" font-size="3" fill="#3a5a7a" font-family="Inter,sans-serif">2280mAh  ·  7.2V</text>
+            <!-- edge highlight -->
+            <rect x="4" y="11" width="58" height="1" rx="0.5" fill="rgba(255,255,255,0.06)"/>
+          </svg>
+        </div>
+
+        <!-- ═══ CONTROL DIALS ═══ -->
+        <div class="camera-part part-dial-top" data-name="Top Control Dials" data-spec="Mode · Exp Comp · Drive · Custom" data-desc="The mode dial selects PASM plus custom memory presets. The exposure compensation dial gives ±5 EV at your thumb's reach. C1/C2 custom buttons are programmed with Zachary's most-used settings for instant access mid-shoot.">
+          <svg viewBox="0 0 98 40" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="dl_dial" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e2e2e"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
+              <radialGradient id="dl_mode" cx="50%" cy="40%"><stop offset="0%" stop-color="#343434"/><stop offset="100%" stop-color="#1e1e1e"/></radialGradient>
+            </defs>
+            <!-- mode dial (left, large) -->
+            <circle cx="22" cy="20" r="18" fill="url(#dl_mode)" stroke="#3e3e3e" stroke-width="0.6"/>
+            <circle cx="22" cy="20" r="14" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="0.4"/>
+            <circle cx="22" cy="20" r="10" fill="#191919"/>
+            <!-- mode labels around dial -->
+            <text x="22" y="6" text-anchor="middle" font-size="3.5" fill="#888" font-family="Inter,sans-serif">M</text>
+            <text x="32" y="10" text-anchor="middle" font-size="3.2" fill="#666" font-family="Inter,sans-serif">A</text>
+            <text x="36" y="21" text-anchor="middle" font-size="3.2" fill="#666" font-family="Inter,sans-serif">S</text>
+            <text x="32" y="31" text-anchor="middle" font-size="3.2" fill="#555" font-family="Inter,sans-serif">P</text>
+            <text x="22" y="35" text-anchor="middle" font-size="3" fill="#555" font-family="Inter,sans-serif">SCN</text>
+            <text x="11" y="31" text-anchor="middle" font-size="3.2" fill="#555" font-family="Inter,sans-serif">C1</text>
+            <text x="7" y="21" text-anchor="middle" font-size="3" fill="#555" font-family="Inter,sans-serif">C2</text>
+            <text x="10" y="10" text-anchor="middle" font-size="3" fill="#555" font-family="Inter,sans-serif">C3</text>
+            <!-- indicator mark at M (top) -->
+            <circle cx="22" cy="4" r="1" fill="#cc3333"/>
+            <!-- exposure comp dial (right, medium) -->
+            <circle cx="66" cy="20" r="14" fill="url(#dl_dial)" stroke="#3e3e3e" stroke-width="0.5"/>
+            <circle cx="66" cy="20" r="10" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="0.3"/>
+            <!-- tick marks around exp comp dial -->
+            <g opacity="0.6" stroke="#666" stroke-width="0.4">
+              <line x1="66" y1="7" x2="66" y2="9.5"/><line x1="72.5" y1="8.8" x2="71" y2="10.9"/><line x1="77.2" y1="13.5" x2="75.1" y2="15"/><line x1="79" y1="20" x2="76.5" y2="20"/>
+              <line x1="77.2" y1="26.5" x2="75.1" y2="25"/><line x1="72.5" y1="31.2" x2="71" y2="29.1"/><line x1="66" y1="33" x2="66" y2="30.5"/>
+              <line x1="59.5" y1="31.2" x2="61" y2="29.1"/><line x1="54.8" y1="26.5" x2="56.9" y2="25"/><line x1="53" y1="20" x2="55.5" y2="20"/>
+              <line x1="54.8" y1="13.5" x2="56.9" y2="15"/><line x1="59.5" y1="8.8" x2="61" y2="10.9"/>
+            </g>
+            <text x="66" y="22" text-anchor="middle" font-size="3.5" fill="#777" font-family="Inter,sans-serif">+/-</text>
+            <!-- drive dial (rightmost, small) -->
+            <circle cx="88" cy="20" r="8" fill="url(#dl_dial)" stroke="#3e3e3e" stroke-width="0.4"/>
+            <circle cx="88" cy="20" r="5" fill="#1a1a1a"/>
+            <text x="88" y="22" text-anchor="middle" font-size="3.2" fill="#666" font-family="Inter,sans-serif">▐▐</text>
+          </svg>
+        </div>
+
+        <!-- ═══ DUAL SD CARD SLOTS ═══ -->
+        <div class="camera-part part-card-slot" data-name="Dual SD Card Slots" data-spec="Slot 1: UHS-II · Slot 2: UHS-I" data-desc="Two card slots for fail-safe redundancy. Slot 1 runs UHS-II for maximum write speeds during high-speed burst. Zachary shoots simultaneous backup to both — every frame mirrored in real time. No excuses for losing a shot.">
+          <svg viewBox="0 0 50 75" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cd_door" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#232323"/><stop offset="100%" stop-color="#161616"/></linearGradient>
+              <linearGradient id="cd_slot" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#111"/><stop offset="100%" stop-color="#0a0a0a"/></linearGradient>
+            </defs>
+            <!-- door body -->
+            <rect x="2" y="2" width="46" height="71" rx="3" fill="url(#cd_door)" stroke="#2e2e2e" stroke-width="0.6"/>
+            <!-- rubber seal around edge -->
+            <rect x="3.5" y="3.5" width="43" height="68" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+            <!-- slot 1 housing -->
+            <rect x="7" y="8" width="36" height="26" rx="2" fill="#1a1a1a" stroke="#333" stroke-width="0.4"/>
+            <rect x="9" y="10" width="32" height="22" rx="1" fill="url(#cd_slot)" stroke="#2a2a2a" stroke-width="0.3"/>
+            <!-- card contacts inside slot 1 -->
+            <g stroke="#2a4a2a" stroke-width="0.5" opacity="0.7">
+              <line x1="12" y1="28" x2="38" y2="28"/><line x1="12" y1="26" x2="38" y2="26"/>
+            </g>
+            <text x="25" y="20" text-anchor="middle" font-size="4" fill="#555" font-family="Inter,sans-serif" letter-spacing="0.5">SD 1</text>
+            <text x="25" y="27" text-anchor="middle" font-size="3" fill="#444" font-family="Inter,sans-serif">UHS-II</text>
+            <!-- slot 2 housing -->
+            <rect x="7" y="40" width="36" height="26" rx="2" fill="#1a1a1a" stroke="#333" stroke-width="0.4"/>
+            <rect x="9" y="42" width="32" height="22" rx="1" fill="url(#cd_slot)" stroke="#2a2a2a" stroke-width="0.3"/>
+            <g stroke="#2a4a2a" stroke-width="0.5" opacity="0.7">
+              <line x1="12" y1="60" x2="38" y2="60"/><line x1="12" y1="58" x2="38" y2="58"/>
+            </g>
+            <text x="25" y="52" text-anchor="middle" font-size="4" fill="#555" font-family="Inter,sans-serif" letter-spacing="0.5">SD 2</text>
+            <text x="25" y="59" text-anchor="middle" font-size="3" fill="#444" font-family="Inter,sans-serif">UHS-I</text>
+            <!-- door latch -->
+            <rect x="20" y="70" width="10" height="3" rx="1" fill="#2a2a2a" stroke="#333" stroke-width="0.3"/>
+          </svg>
+        </div>
+
+        <!-- ═══ GRIP RUBBER PANEL ═══ -->
+        <div class="camera-part part-grip" data-name="Grip Rubber Panel" data-spec="Textured Rubber · Contoured" data-desc="Redesigned deep grip with finely textured rubber for all-day shooting comfort. The ergonomic contour lets Zachary carry the camera one-handed through a six-hour sports shoot without fatigue. Every mm of depth is intentional.">
+          <svg viewBox="0 0 55 155" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gr_body" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#181818"/><stop offset="60%" stop-color="#222"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
+              <linearGradient id="gr_highlight" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="rgba(255,255,255,0)"/><stop offset="40%" stop-color="rgba(255,255,255,0.04)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+              <pattern id="gr_dimple" x="0" y="0" width="3.5" height="3.5" patternUnits="userSpaceOnUse"><circle cx="1.75" cy="1.75" r="0.7" fill="rgba(0,0,0,0.5)" stroke="rgba(40,40,40,0.3)" stroke-width="0.2"/></pattern>
+            </defs>
+            <!-- shadow -->
+            <path d="M9,8 Q4,8 4,16 L4,135 Q4,148 14,148 L42,148 Q52,148 52,135 L54,20 Q54,8 44,8 Z" fill="#000" opacity="0.5" transform="translate(1,3)"/>
+            <!-- grip shape -->
+            <path d="M9,8 Q4,8 4,16 L4,135 Q4,148 14,148 L42,148 Q52,148 52,135 L54,20 Q54,8 44,8 Z" fill="url(#gr_body)" stroke="#282828" stroke-width="0.7"/>
+            <!-- dimple texture overlay -->
+            <clipPath id="gr_clip"><path d="M9,8 Q4,8 4,16 L4,135 Q4,148 14,148 L42,148 Q52,148 52,135 L54,20 Q54,8 44,8 Z"/></clipPath>
+            <rect x="4" y="8" width="51" height="142" fill="url(#gr_dimple)" clip-path="url(#gr_clip)" opacity="0.85"/>
+            <!-- highlight edge -->
+            <rect x="4" y="8" width="51" height="142" fill="url(#gr_highlight)" clip-path="url(#gr_clip)"/>
+            <!-- front contour edge (right side) -->
+            <path d="M53,20 L53,135" stroke="rgba(0,0,0,0.4)" stroke-width="2" fill="none"/>
+            <!-- top finger groove -->
+            <ellipse cx="42" cy="14" rx="9" ry="4.5" fill="#282828" stroke="#333" stroke-width="0.4"/>
+            <ellipse cx="42" cy="14" rx="6" ry="2.5" fill="#222"/>
           </svg>
         </div>
 
@@ -401,22 +802,25 @@
 
     // Part explosion offsets (at full explosion, scroll progress = 1)
     const explosionMap = {
-      'part-lens':      { x: 0,    y: -180, rotate: -3  },
-      'part-evf':       { x: 100,  y: -160, rotate: 5   },
-      'part-screen':    { x: 110,  y: 150,  rotate: -4  },
-      'part-sensor':    { x: -140, y: 130,  rotate: 8   },
-      'part-grip':      { x: -130, y: 110,  rotate: -6  },
-      'part-dial-top':  { x: 120,  y: -130, rotate: 3   },
-      'part-mount':     { x: -120, y: -50,  rotate: -10 },
-      'part-card-slot': { x: 150,  y: 0,    rotate: 5   },
-      'part-battery':   { x: 0,    y: 190,  rotate: -5  },
+      'part-lens':      { x: -175, y: -240, rotate: -10 },
+      'part-glass':     { x: -55,  y: -285, rotate: 6   },
+      'part-evf':       { x: 185,  y: -230, rotate: 14  },
+      'part-screen':    { x: 190,  y: 195,  rotate: -7  },
+      'part-sensor':    { x: -205, y: 90,   rotate: 18  },
+      'part-shutter':   { x: -185, y: 155,  rotate: -14 },
+      'part-pcb':       { x: 205,  y: 65,   rotate: 9   },
+      'part-grip':      { x: -230, y: 55,   rotate: -11 },
+      'part-dial-top':  { x: 165,  y: -205, rotate: 7   },
+      'part-mount':     { x: -155, y: 195,  rotate: -17 },
+      'part-card-slot': { x: 250,  y: -55,  rotate: 11  },
+      'part-battery':   { x: 0,    y: 260,  rotate: -6  },
       'part-body':      { x: 0,    y: 0,    rotate: 0   },
     };
 
     const stageLabels = [
-      { at: 0.0, title: 'Sony α7R III', sub: 'Scroll to explore' },
-      { at: 0.15, title: 'Disassembly', sub: 'Every piece serves a purpose' },
-      { at: 0.5,  title: 'Fully Exploded', sub: 'Hover any part to learn more' },
+      { at: 0.0,  title: 'Sony α7R III + Zeiss FE 55mm', sub: 'Scroll to disassemble' },
+      { at: 0.15, title: 'Disassembly Initiated', sub: 'Every piece serves a purpose' },
+      { at: 0.5,  title: 'Fully Exploded', sub: 'Hover any component to learn more' },
       { at: 0.85, title: '42.4 Megapixels of Intent', sub: 'The tool behind the vision' },
     ];
 
@@ -433,7 +837,12 @@
 
     function updateCamera() {
       const raw = getScrollProgress();
-      const t = easeOutCubic(raw);
+
+      // Hold camera fully assembled for first 15% of section scroll,
+      // then disassemble across the remaining 85%.
+      const holdEnd = 0.15;
+      const activeRaw = raw < holdEnd ? 0 : (raw - holdEnd) / (1 - holdEnd);
+      const t = easeOutCubic(Math.max(0, Math.min(1, activeRaw)));
 
       // Progress bar
       progressBar.style.height = (raw * 100) + '%';
@@ -452,18 +861,13 @@
         connectors.classList.remove('visible');
       }
 
-      // Update stage labels
+      // Update stage label text (visibility controlled by IntersectionObserver)
       let currentStage = stageLabels[0];
       for (const stage of stageLabels) {
         if (raw >= stage.at) currentStage = stage;
       }
       stageTitleEl.textContent = currentStage.title;
       stageSubEl.textContent = currentStage.sub;
-      if (raw > 0.02) {
-        stageLabel.classList.add('active');
-      } else {
-        stageLabel.classList.remove('active');
-      }
 
       // Move each part
       document.querySelectorAll('.camera-part').forEach(part => {
@@ -505,6 +909,19 @@
         tooltip.classList.remove('visible');
       });
     });
+
+    // Show stage label whenever the camera section is in view
+    // (camera is fully assembled the moment the section first enters viewport)
+    const cameraLabelObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          stageLabel.classList.add('active');
+        } else {
+          stageLabel.classList.remove('active');
+        }
+      });
+    }, { threshold: 0.05 });
+    cameraLabelObserver.observe(section);
 
     // Scroll listener
     let ticking = false;

@@ -28,7 +28,7 @@
         onComplete() {
           gsap.to(loader, {
             opacity: 0,
-            duration: 0.6,
+            duration: 0.7,
             ease: 'power2.inOut',
             onComplete() {
               loader.style.display = 'none';
@@ -38,28 +38,17 @@
         }
       });
 
-      // Animate the SVG letters
-      const letters = qsa('.loader__letter', loader);
-      const line = qs('.loader__line', loader);
-
-      // Draw in the line
-      if (line) {
-        tl.to(line, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.out' }, 0);
+      // Fade in the full logo
+      const logoEl = qs('.loader__logo', loader);
+      if (logoEl) {
+        tl.fromTo(logoEl,
+          { opacity: 0, scale: 0.93 },
+          { opacity: 1, scale: 1, duration: 0.9, ease: 'power3.out' }
+        );
       }
 
-      // Fade in letters
-      if (letters.length) {
-        tl.to(letters, {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          stagger: 0.15,
-          ease: 'power3.out'
-        }, 0.3);
-      }
-
-      // Hold for a beat
-      tl.to({}, { duration: 0.5 });
+      // Hold while aperture breathes (CSS handles the iris animation)
+      tl.to({}, { duration: 1.0 });
     });
   }
 
@@ -334,6 +323,7 @@
     if (!hero) return;
 
     // Hero content reveal
+    const wordmark = qs('.hero__logo-wordmark', hero);
     const greeting = qs('.hero__greeting', hero);
     const line     = qs('.hero__line', hero);
     const tagline  = qs('.hero__tagline', hero);
@@ -341,10 +331,38 @@
 
     const tl = gsap.timeline({ delay: 1.2 });
 
-    if (greeting) tl.to(greeting, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0);
-    if (line) tl.to(line, { opacity: 1, scaleX: 1, duration: 0.8, ease: 'power3.out' }, 0.4);
-    if (tagline) tl.to(tagline, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.6);
-    if (scroll) tl.to(scroll, { opacity: 1, duration: 0.8, ease: 'power2.out' }, 1);
+    if (wordmark) tl.to(wordmark, { opacity: 1, duration: 0.9, ease: 'power3.out' }, 0);
+    if (greeting) tl.to(greeting, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.5);
+    if (line) tl.to(line, { opacity: 1, scaleX: 1, duration: 0.8, ease: 'power3.out' }, 0.9);
+    if (tagline) tl.to(tagline, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 1.1);
+    if (scroll) tl.to(scroll, { opacity: 1, duration: 0.8, ease: 'power2.out' }, 1.5);
+
+    // Book CTA popup — appears after hero settles
+    const bookCta   = qs('#bookCta');
+    const bookDismiss = qs('#bookDismiss');
+    if (bookCta) {
+      gsap.to(bookCta, {
+        opacity: 1,
+        duration: 0.9,
+        ease: 'power3.out',
+        delay: 3.2,
+        onComplete() { bookCta.classList.add('floating'); }
+      });
+    }
+    if (bookDismiss) {
+      bookDismiss.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        bookCta.classList.remove('floating');
+        gsap.to(bookCta, {
+          opacity: 0,
+          y: 8,
+          duration: 0.35,
+          ease: 'power2.in',
+          onComplete() { bookCta.style.display = 'none'; }
+        });
+      });
+    }
 
     // Hero mouse glow
     const glow = qs('#heroMouseGlow');
@@ -583,9 +601,18 @@
     function openLightbox(item, index) {
       currentIndex = index;
       const overlay = qs('.gallery-item__overlay span', item);
+      const imgUrl  = item.dataset.src || '';
       if (titleEl) titleEl.textContent = overlay ? overlay.textContent : '';
       if (catEl) catEl.textContent = item.dataset.category || '';
-      if (content) content.textContent = overlay ? overlay.textContent : 'Image Preview';
+
+      // Show real photo if available
+      if (content) {
+        if (imgUrl) {
+          content.innerHTML = `<img src="${imgUrl}" alt="${item.dataset.title || ''}" />`;
+        } else {
+          content.textContent = overlay ? overlay.textContent : 'Image Preview';
+        }
+      }
 
       const rect = item.getBoundingClientRect();
 
@@ -621,9 +648,17 @@
       currentIndex = (currentIndex + dir + galleryItems.length) % galleryItems.length;
       const item = galleryItems[currentIndex];
       const overlay = qs('.gallery-item__overlay span', item);
+      const imgUrl  = item.dataset.src || '';
       if (titleEl) titleEl.textContent = overlay ? overlay.textContent : '';
       if (catEl) catEl.textContent = item.dataset.category || '';
-      if (content) content.textContent = overlay ? overlay.textContent : 'Image Preview';
+
+      if (content) {
+        if (imgUrl) {
+          content.innerHTML = `<img src="${imgUrl}" alt="${item.dataset.title || ''}" />`;
+        } else {
+          content.textContent = overlay ? overlay.textContent : 'Image Preview';
+        }
+      }
 
       gsap.fromTo(imageWrap, { opacity: 0, x: dir * 40 }, { opacity: 1, x: 0, duration: 0.35, ease: 'power2.out' });
     }
@@ -646,6 +681,16 @@
       if (e.key === 'ArrowLeft') navigateLB(-1);
       if (e.key === 'ArrowRight') navigateLB(1);
     });
+
+    // Expose regather for gallery.js to call after async load
+    window._reinitLightbox = () => {
+      gatherItems();
+      galleryItems.forEach((item, i) => {
+        item.removeEventListener('click', item._lbHandler);
+        item._lbHandler = () => openLightbox(item, i);
+        item.addEventListener('click', item._lbHandler);
+      });
+    };
   }
 
   /* ==============================================
@@ -804,6 +849,55 @@
   /* ==============================================
      19. CONTACT FORM HANDLER (continued)
      ============================================== */
+  /* ==============================================
+     PACKAGE SELECTION & PRINTS TOGGLE
+     ============================================== */
+  function initPackageSelection() {
+    const cards = qsa('.pricing__card');
+    const packageInput = qs('#selectedPackage');
+    const printsBtn = qs('#printsBtn');
+    const printsInner = qs('#printsToggle');
+    const printsField = qs('#printsField');
+
+    if (!cards.length || !packageInput) return;
+
+    // Package card selection
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const wasSelected = card.classList.contains('selected');
+
+        // Deselect all
+        cards.forEach(c => c.classList.remove('selected'));
+
+        if (wasSelected) {
+          // Deselect
+          packageInput.value = '';
+        } else {
+          // Select this one
+          card.classList.add('selected');
+          packageInput.value = card.dataset.package;
+        }
+
+        // Smooth scroll to form
+        const formSection = qs('#contactSection');
+        if (formSection && !wasSelected) {
+          setTimeout(() => {
+            formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        }
+      });
+    });
+
+    // Prints toggle
+    if (printsBtn && printsInner && printsField) {
+      printsBtn.addEventListener('click', () => {
+        const isActive = printsBtn.classList.toggle('active');
+        printsInner.classList.toggle('selected', isActive);
+        printsField.style.display = isActive ? '' : 'none';
+      });
+    }
+  }
+
   function initContactForm() {
     const form = qs('#contactForm');
     if (!form) return;
@@ -824,6 +918,14 @@
         btn.style.borderColor = '';
         btn.style.color = '';
         form.reset();
+        // Also reset package & prints selections
+        qsa('.pricing__card').forEach(c => c.classList.remove('selected'));
+        const pBtn = qs('#printsBtn');
+        const pInner = qs('#printsToggle');
+        const pField = qs('#printsField');
+        if (pBtn) pBtn.classList.remove('active');
+        if (pInner) pInner.classList.remove('selected');
+        if (pField) pField.style.display = 'none';
       }, 2500);
     });
   }
@@ -850,8 +952,22 @@
     initGlowTracking();
     initParallax();
     initInspoBoard();
+    initPackageSelection();
     initContactForm();
 
+    // When gallery.js finishes async loading photos, reinit lightbox + tilt + reveals
+    document.addEventListener('gallery:loaded', () => {
+      if (window._reinitLightbox) window._reinitLightbox();
+      initTilt();
+      qsa('.image-reveal:not(.revealed)').forEach(el => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 85%',
+          once: true,
+          onEnter() { el.classList.add('revealed'); }
+        });
+      });
+    });
   }
 
   // Fire when DOM ready

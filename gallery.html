@@ -14,10 +14,29 @@
   <!-- Loading Screen -->
   <div class="loader" id="loader">
     <div class="loader__logo">
-      <svg class="loader__svg" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="5" y="48" class="loader__letter loader__letter--z" font-family="'Playfair Display', serif" font-size="52" fill="#f0f0f0">Z</text>
-        <text x="55" y="48" class="loader__letter loader__letter--e" font-family="'Playfair Display', serif" font-size="52" fill="#f0f0f0">E</text>
-        <line class="loader__line" x1="10" y1="56" x2="110" y2="56" stroke="#555" stroke-width="0.5"/>
+      <svg class="loader__svg" viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="apGL" cx="35%" cy="28%" r="72%">
+            <stop offset="0%" stop-color="#f4df88"/>
+            <stop offset="55%" stop-color="#c8a45a"/>
+            <stop offset="100%" stop-color="#7a5018"/>
+          </radialGradient>
+        </defs>
+        <g transform="translate(40,40)">
+          <circle r="30" fill="#0d0d0d"/>
+          <circle r="30" fill="none" stroke="rgba(200,164,90,0.25)" stroke-width="1.2"/>
+          <g class="loader-aperture-blades">
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(0)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(60)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(120)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(180)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(240)"/>
+            <path d="M 4 3 L 25 -14.5 A 29 29 0 0 1 25 14.5 L 4 -3 Z" fill="url(#apGL)" opacity="0.9" transform="rotate(300)"/>
+          </g>
+          <circle r="8" fill="#0a0a0a"/>
+        </g>
+        <text x="210" y="29" text-anchor="middle" font-family="'Playfair Display', serif" font-size="18" fill="#f0f0f0" font-weight="600" letter-spacing="4.5">ZACHARY ELDRED</text>
+        <text x="210" y="51" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.5" fill="#c8a45a" letter-spacing="3.5">— PHOTOGRAPHY —</text>
       </svg>
     </div>
   </div>
@@ -36,7 +55,32 @@
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo magnetic" data-strength="0.3">ZE</a>
+    <a href="index.html" class="nav__logo magnetic" data-strength="0.3">
+      <svg class="nav-logo-svg" viewBox="0 0 175 32" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="apGN" cx="35%" cy="28%" r="72%">
+            <stop offset="0%" stop-color="#f4df88"/>
+            <stop offset="55%" stop-color="#c8a45a"/>
+            <stop offset="100%" stop-color="#7a5018"/>
+          </radialGradient>
+        </defs>
+        <g transform="translate(16,16)">
+          <circle r="14.5" fill="#0d0d0d"/>
+          <circle r="14.5" fill="none" stroke="rgba(200,164,90,0.3)" stroke-width="0.7"/>
+          <g class="nav-aperture-blades">
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(0)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(60)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(120)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(180)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(240)"/>
+            <path d="M 2 1.5 L 12 -7 A 14 14 0 0 1 12 7 L 2 -1.5 Z" fill="url(#apGN)" opacity="0.9" transform="rotate(300)"/>
+          </g>
+          <circle r="3.5" fill="#0a0a0a"/>
+        </g>
+        <text x="106" y="13" text-anchor="middle" font-family="'Playfair Display', serif" font-size="9.5" fill="#f0f0f0" font-weight="600" letter-spacing="2.5">ZACHARY ELDRED</text>
+        <text x="106" y="24.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="5.5" fill="#c8a45a" letter-spacing="2">— PHOTOGRAPHY —</text>
+      </svg>
+    </a>
     <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -74,103 +118,17 @@
     </div>
   </div>
 
-  <!-- Masonry Gallery Grid -->
+  <!-- Masonry Gallery Grid — populated by js/gallery.js -->
   <div class="gallery-grid" id="galleryGrid">
-    <div class="gallery-item gallery-item--h3 glow-target tilt-card image-reveal" data-category="portrait">
-      <div class="gallery-item__placeholder"><span>Portrait 01</span></div>
-      <div class="gallery-item__overlay"><span>Portrait Study</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h2 glow-target tilt-card image-reveal" data-category="portrait">
-      <div class="gallery-item__placeholder"><span>Portrait 02</span></div>
-      <div class="gallery-item__overlay"><span>Natural Light</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h1 glow-target tilt-card image-reveal" data-category="portrait">
-      <div class="gallery-item__placeholder"><span>Portrait 03</span></div>
-      <div class="gallery-item__overlay"><span>Shadow &amp; Form</span></div>
-    </div>
-
-    <div class="gallery-item gallery-item--h2 glow-target tilt-card image-reveal" data-category="automotive">
-      <div class="gallery-item__placeholder"><span>Auto 01</span></div>
-      <div class="gallery-item__overlay"><span>Midnight Drive</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h3 glow-target tilt-card image-reveal" data-category="automotive">
-      <div class="gallery-item__placeholder"><span>Auto 02</span></div>
-      <div class="gallery-item__overlay"><span>Chrome Detail</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h1 glow-target tilt-card image-reveal" data-category="automotive">
-      <div class="gallery-item__placeholder"><span>Auto 03</span></div>
-      <div class="gallery-item__overlay"><span>Rolling Shot</span></div>
-    </div>
-
-    <div class="gallery-item gallery-item--h1 glow-target tilt-card image-reveal" data-category="sports">
-      <div class="gallery-item__placeholder"><span>Sports 01</span></div>
-      <div class="gallery-item__overlay"><span>Peak Moment</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h4 glow-target tilt-card image-reveal" data-category="sports">
-      <div class="gallery-item__placeholder"><span>Sports 02</span></div>
-      <div class="gallery-item__overlay"><span>In Motion</span></div>
-    </div>
-
-    <div class="gallery-item gallery-item--h2 glow-target tilt-card image-reveal" data-category="landscape">
-      <div class="gallery-item__placeholder"><span>Landscape 01</span></div>
-      <div class="gallery-item__overlay"><span>First Light</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h3 glow-target tilt-card image-reveal" data-category="landscape">
-      <div class="gallery-item__placeholder"><span>Landscape 02</span></div>
-      <div class="gallery-item__overlay"><span>Valley Fog</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h1 glow-target tilt-card image-reveal" data-category="landscape">
-      <div class="gallery-item__placeholder"><span>Landscape 03</span></div>
-      <div class="gallery-item__overlay"><span>Ridge Line</span></div>
-    </div>
-
-    <div class="gallery-item gallery-item--h4 glow-target tilt-card image-reveal" data-category="product">
-      <div class="gallery-item__placeholder"><span>Product 01</span></div>
-      <div class="gallery-item__overlay"><span>Minimal Object</span></div>
-    </div>
-    <div class="gallery-item gallery-item--h2 glow-target tilt-card image-reveal" data-category="product">
-      <div class="gallery-item__placeholder"><span>Product 02</span></div>
-      <div class="gallery-item__overlay"><span>Texture Study</span></div>
-    </div>
+    <!-- Photos load from Supabase -->
   </div>
 
-  <!-- Horizontal Drag Gallery (alt view) -->
+  <!-- Horizontal Drag Gallery — populated by js/gallery.js -->
   <div class="gallery-horizontal" id="galleryHorizontal" style="display:none;">
     <div class="gallery-horizontal__track" id="horizontalTrack">
-      <div class="gallery-h-item tilt-card" data-category="portrait">
-        <div class="gallery-item__placeholder gallery-item--h3"><span>Portrait 01</span></div>
-        <div class="gallery-item__overlay"><span>Portrait Study</span></div>
-      </div>
-      <div class="gallery-h-item tilt-card" data-category="portrait">
-        <div class="gallery-item__placeholder gallery-item--h2"><span>Portrait 02</span></div>
-        <div class="gallery-item__overlay"><span>Natural Light</span></div>
-      </div>
-      <div class="gallery-h-item tilt-card" data-category="automotive">
-        <div class="gallery-item__placeholder gallery-item--h2"><span>Auto 01</span></div>
-        <div class="gallery-item__overlay"><span>Midnight Drive</span></div>
-      </div>
-      <div class="gallery-h-item tilt-card" data-category="automotive">
-        <div class="gallery-item__placeholder gallery-item--h3"><span>Auto 02</span></div>
-        <div class="gallery-item__overlay"><span>Chrome Detail</span></div>
-      </div>
-      <div class="gallery-h-item tilt-card" data-category="sports">
-        <div class="gallery-item__placeholder gallery-item--h1"><span>Sports 01</span></div>
-        <div class="gallery-item__overlay"><span>Peak Moment</span></div>
-      </div>
-      <div class="gallery-h-item tilt-card" data-category="landscape">
-        <div class="gallery-item__placeholder gallery-item--h2"><span>Landscape 01</span></div>
-        <div class="gallery-item__overlay"><span>First Light</span></div>
-      </div>
-      <div class="gallery-h-item tilt-card" data-category="landscape">
-        <div class="gallery-item__placeholder gallery-item--h3"><span>Landscape 02</span></div>
-        <div class="gallery-item__overlay"><span>Valley Fog</span></div>
-      </div>
-      <div class="gallery-h-item tilt-card" data-category="product">
-        <div class="gallery-item__placeholder gallery-item--h4"><span>Product 01</span></div>
-        <div class="gallery-item__overlay"><span>Minimal Object</span></div>
-      </div>
+      <!-- Photos load from Supabase -->
+      <div class="gallery-horizontal__hint">Drag to scroll &rarr;</div>
     </div>
-    <div class="gallery-horizontal__hint">Drag to scroll &rarr;</div>
   </div>
 
   <!-- GSAP Lightbox -->
@@ -178,7 +136,7 @@
     <div class="lightbox__backdrop"></div>
     <button class="lightbox__close" id="lightboxClose">&times;</button>
     <div class="lightbox__image-wrap" id="lightboxImageWrap">
-      <div class="lightbox__content" id="lightboxContent">Image Preview</div>
+      <div class="lightbox__content" id="lightboxContent"></div>
     </div>
     <div class="lightbox__info" id="lightboxInfo">
       <span class="lightbox__title" id="lightboxTitle"></span>
@@ -208,5 +166,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
   <script src="js/main.js"></script>
+  <script type="module" src="js/gallery.js"></script>
 </body>
 </html>
